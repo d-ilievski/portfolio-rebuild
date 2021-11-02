@@ -3,7 +3,8 @@
     <div class="left-container">
       <logo />
     </div>
-    <navigation />
+    <navigation id="logo-segment-navigation" />
+    <div class="logo-close-trigger"></div>
   </div>
 </template>
 
@@ -14,7 +15,7 @@ import Navigation from '~/components/Navigation'
 export default {
   components: {
     logo: Logo,
-    navigation: Navigation
+    navigation: Navigation,
   },
 }
 </script>
@@ -31,5 +32,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.logo-close-trigger {
+  position: absolute;
+  pointer-events: none;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>

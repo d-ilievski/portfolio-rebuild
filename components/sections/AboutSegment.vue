@@ -1,13 +1,18 @@
 <template>
   <div class="segment-container">
-    <segment-title text="About" />
+    <segment-title text="About" id="about-segment-title" class="close" />
     <div class="wrapper">
       <div class="left">
         <div class="name-card">
           <div class="image-container">
             <img
+              alt="A picture of Daniel's Room"
+              src="~/assets/profile-photo-bg.jpg"
+            />
+            <img
               alt="A picture of Daniel Ilievski"
-              src="~/assets/profile-photo-daniel.jpg"
+              src="~/assets/profile-photo.png"
+              class="person"
             />
           </div>
           <h3>Who's this guy?</h3>
@@ -27,8 +32,8 @@
             I love creating user-centric tech products with captivating UIs and
             intuitive UX.
           </p>
-          <a class="text-link cta"
-            ><strong>Lets create something great!</strong></a
+          <span @click="navigateToContact" class="text-link cta"
+            ><strong>Lets create something great!</strong></span
           >
         </div>
       </div>
@@ -38,7 +43,7 @@
           backend and a frontend engineer on successful products in the Internet
           banking, gaming &amp; gambling, and IT service-providing industries.
         </p>
-        <h2>Skills &amp; Technologies</h2>
+        <h2 id="skills-technologies-title">Skills &amp; Technologies</h2>
         <ul class="skills-list">
           <li>
             <span>Skills: </span>
@@ -69,8 +74,18 @@
 </template>
 
 <script>
+import gsap from 'gsap'
 export default {
   name: 'About',
+  methods: {
+    navigateToContact() {
+      gsap.to(window, {
+        scrollTo: `#contact-segment`,
+        ease: 'power4.out',
+        duration: 3,
+      })
+    },
+  },
 }
 </script>
 
@@ -93,19 +108,27 @@ export default {
 .image-container {
   max-height: 300px;
   overflow: hidden;
+  position: relative;
 }
 
 .image-container img {
   width: 100%;
 }
 
+.image-container .person {
+  position: absolute;
+  top: 260px;
+  left: 0;
+}
+
 .name-card {
-  transition: all 2s ease;
   border-width: 4px;
   border-style: solid;
   border-color: var(--foreground-color);
   padding: 16px;
   padding-bottom: 24px;
+  height: 340px;
+  overflow: hidden;
 }
 
 p {
@@ -125,10 +148,15 @@ p {
 
 .skills-list li {
   margin-bottom: 16px;
+  opacity: 0;
 }
 
 .skills-list li span {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+#skills-technologies-title {
+  opacity: 0;
 }
 </style>

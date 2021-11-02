@@ -1,8 +1,8 @@
 <template>
   <div class="segment-container">
-    <segment-title text="Blog" />
-    <hr />
-    <paging :numTotalPages="5"></paging>
+    <segment-title text="Blog" id="blog-segment-title" class="close" />
+
+    <div id="coming-soon">Coming soon!</div>
   </div>
 </template>
 

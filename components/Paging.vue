@@ -1,5 +1,11 @@
 <template>
-  <div class="container" @click="next">
+  <div class="container" :class="{ invert }">
+    <div v-if="arrows" class="navigate-left" @click="prev">
+      <span>&lt;</span>
+    </div>
+    <div v-if="arrows" class="navigate-right" @click="next">
+      <span>&gt;</span>
+    </div>
     <div
       class="wrapper"
       v-touch:swipe.right="prev"
@@ -7,15 +13,16 @@
       v-touch:swipe.up="(e) => e.preventDefault()"
       v-touch:swipe.down="(e) => e.preventDefault()"
     >
-      <div class="box draw"></div>
-      <div class="pages" :style="{ left: left + 'px' }">
-        <span
-          v-for="i in numTotalPages"
-          :key="i"
-          :class="{ accent: i === page }"
-          v-touch:tap="() => setPage(i - 1)"
-          >{{ i }}</span
-        >
+      <div class="box">
+        <div class="pages" :style="{ left: left + 'px' }">
+          <span
+            v-for="i in numTotalPages"
+            :key="i"
+            :class="{ accent: i === page }"
+            v-touch:tap="() => setPage(i)"
+            >{{ i }}</span
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -30,14 +37,17 @@ export default {
   },
   props: {
     numTotalPages: Number,
+    invert: Boolean,
+    arrows: Boolean,
   },
   methods: {
     next: function () {
-      if (this.isLast) {
+      if (this.page === this.numTotalPages) {
         this.page = 1
       } else {
         this.page++
       }
+      this.$emit('change', { page: this.page })
     },
     prev: function () {
       if (this.page === 1) {
@@ -45,37 +55,90 @@ export default {
       } else {
         this.page--
       }
+      this.$emit('change', { page: this.page })
     },
     setPage: function (page) {
       this.page = page
+      this.$emit('change', { page: this.page })
     },
   },
   computed: {
-    isLast: function () {
-      console.log(this.left + 10, this.numTotalPages * -60)
-      // this.numTotalPages - 1 zaso prviot element e na pozicija
-      // -60 turned out to be a magic number for a reason im too high to understand
-      return this.left + 10 === (this.numTotalPages - 1) * -60
-    },
     left: function () {
-      return -10 - 60 * (this.page - 1)
+      // initial left - distance between numbers * which page it is - page starts from 1
+      return -14 - 60 * (this.page - 1)
     },
+  },
+  mounted() {
+    setInterval(() => {
+      this.next()
+    }, 5000)
   },
 }
 </script>
 
 <style scoped>
 .container {
-  position: relative;
   display: flex;
   justify-content: center;
   user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigate-left,
+.navigate-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.navigate-left {
+  left: 0;
+  right: 80%;
+  background: linear-gradient(
+    90deg,
+    var(--foreground-color) 0%,
+    var(--foreground-color) 45%,
+    rgba(34, 32, 33, 0) 100%
+  );
+}
+
+.navigate-right {
+  right: 0;
+  left: 80%;
+  background: linear-gradient(
+    -90deg,
+    var(--foreground-color) 0%,
+    var(--foreground-color) 45%,
+    rgba(34, 32, 33, 0) 100%
+  );
+}
+
+.navigate-right span,
+.navigate-left span {
+  opacity: 0.2;
+  transition: opacity linear 0.5s;
+}
+
+.navigate-right:hover span,
+.navigate-left:hover span {
+  opacity: 1;
 }
 
 .wrapper {
   height: 72px;
   display: flex;
   align-items: center;
+  position: relative;
+  width: 100%;
+  justify-content: center;
 }
 
 .pages {
@@ -92,6 +155,7 @@ export default {
   width: 32px;
   height: 32px;
   border: 4px solid var(--foreground-color);
+  position: relative;
 }
 
 .pages span {
@@ -101,6 +165,7 @@ export default {
   opacity: 0.2;
   width: 30px;
   text-align: center;
+  line-height: 1.1;
 }
 .pages span:hover {
   opacity: 0.5;
@@ -147,5 +212,11 @@ export default {
   border-left-color: white;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
+}
+
+.container.invert .box,
+.container.invert .pages span {
+  border-color: var(--background-color);
+  color: var(--background-color);
 }
 </style>

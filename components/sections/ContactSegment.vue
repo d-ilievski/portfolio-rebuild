@@ -1,6 +1,11 @@
 <template>
   <div class="segment-container">
-    <segment-title dark text="Contact"></segment-title>
+    <segment-title
+      invert
+      text="Contact"
+      id="contact-segment-title"
+      class="close"
+    />
     <div class="wrapper">
       <div class="left">
         <p>
@@ -8,14 +13,14 @@
           <a
             target="_top"
             href="mailto:daniel.d.ilievski@gmail.com"
-            class="text-link dark"
+            class="text-link invert"
             >daniel.d.ilievski@gmail.com</a
           >.
         </p>
 
         <p>
           Also, you can find me on
-          <span class="text-link dark"
+          <span class="text-link invert"
             ><a
               href="https://www.linkedin.com/in/daniel-ilievski/"
               target="_blank"
@@ -23,7 +28,7 @@
               <fa :icon="['fab', 'linkedin']" /> LinkedIn
             </a></span
           >, see some of my projects on
-          <span class="text-link dark"
+          <span class="text-link invert"
             ><a
               href="https://github.com/d-ilievski"
               rel="noopener noreferrer"
@@ -32,7 +37,7 @@
             ></span
           >
           or check out my
-          <span class="text-link dark"
+          <span class="text-link invert"
             ><a href="https://www.instagram.com/vo1d.mind/" target="_blank"
               ><fa :icon="['fab', 'instagram']" /> Instagram</a
             ></span
@@ -41,9 +46,9 @@
         </p>
       </div>
       <div class="right">
-        <button>
+        <!-- <button>
           <span>Grab my cv <fa :icon="['fas', 'download']" /></span>
-        </button>
+        </button> -->
       </div>
     </div>
   </div>

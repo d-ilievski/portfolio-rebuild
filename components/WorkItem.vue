@@ -4,35 +4,35 @@
       <div class="image">
         <div class="image-backdrop"></div>
         <div class="image-container">
-          <img src="@/assets/profile-photo-daniel.jpg" />
+          <img :src="require(`@/assets/${item.image}`)" />
         </div>
       </div>
     </div>
     <div class="right">
-      <h1>Lori</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
-        eveniet quaerat obcaecati voluptatum voluptas provident amet
-        voluptatibus ex sapiente eum non ratione animi debitis reiciendis aut
-        corrupti beatae deleniti doloremque? Dolorem sint eius, velit
-        exercitationem temporibus amet quis minima tempore optio? Ipsa aliquid
-        doloribus modi esse quasi quo eum officia!
+      <h1 class="title">{{ item.title }}</h1>
+      <p class="paragraph" v-for="(p, index) in item.paragraphs" :key="index">
+        {{ p }}
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit earum
-        beatae eveniet ab, accusantium quas vitae sint fuga dignissimos? Id
-        debitis velit earum alias itaque quam nulla facilis reprehenderit fuga
-        totam pariatur in quis, dolores, maxime voluptas ipsa perspiciatis
-        praesentium facere placeat dignissimos. Ipsum libero rerum assumenda
-        repudiandae temporibus autem ipsa maxime perferendis maiores? Iste nulla
-        pariatur enim vitae facilis?
-      </p>
+      <div class="icons">
+        <div
+          class="icon-container"
+          v-for="(t, index) in item.technologies"
+          :key="index"
+        >
+          <fa class="icon" :icon="t.icon" />
+          <div class="icon-desc">{{ t.name }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: {
+    item: Object,
+  },
+}
 </script>
 
 <style scoped>
@@ -41,13 +41,17 @@ export default {}
 }
 
 .wrapper {
+  /* if i disable flex here i can still use the carousel */
   display: flex;
   align-items: flex-start;
   width: 100%;
 }
 
 .wrapper .left {
-  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 32px;
 }
 
 .wrapper .right {
@@ -56,8 +60,8 @@ export default {}
 }
 
 .image-container {
-  width: 420px;
-  height: 420px;
+  width: 250px;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,8 +73,8 @@ export default {}
   position: relative;
 }
 .image-backdrop {
-  width: 420px;
-  height: 420px;
+  width: 250px;
+  height: 250px;
   background: var(--background-color);
   position: absolute;
   top: 30px;
@@ -79,5 +83,41 @@ export default {}
 .image-container img {
   width: 100%;
   height: auto;
+}
+.title {
+  margin-bottom: 24px;
+}
+
+.paragraph {
+  margin-bottom: 16px;
+}
+
+.icons {
+  margin-top: 32px;
+  font-size: 3em;
+}
+.icon-container {
+  position: relative;
+  display: inline-block;
+  margin: 0px 8px;
+}
+.icon {
+  opacity: 0.5;
+  transition: opacity 0.2s linear;
+}
+.icon-container:hover .icon,
+.icon-container:hover .icon-desc {
+  opacity: 1;
+}
+.icon-desc {
+  font-size: 1rem;
+  color: var(--background-color);
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  white-space: nowrap;
 }
 </style>

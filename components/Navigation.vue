@@ -1,23 +1,25 @@
 <template>
-  <nav :class="{ open: isOpen }">
+  <nav>
     <ul class="navigation">
-      <li>ABOUT</li>
-      <li>WORK</li>
-      <li>BLOG</li>
-      <li>CONTACT</li>
+      <li @click="navigateTo('about', 1)">ABOUT</li>
+      <li @click="navigateTo('work', 2)">WORK</li>
+      <li @click="navigateTo('blog', 3)">BLOG</li>
+      <li @click="navigateTo('contact', 4)">CONTACT</li>
     </ul>
   </nav>
 </template>
 
 <script>
+import gsap from 'gsap'
 export default {
-  data: () => ({
-    isOpen: false,
-  }),
-  mounted() {
-    setTimeout(() => {
-      this.isOpen = true
-    }, 2800)
+  methods: {
+    navigateTo(segmentName, duration) {
+      gsap.to(window, {
+        scrollTo: `#${segmentName}-segment`,
+        ease: 'power4.out',
+        duration,
+      })
+    },
   },
 }
 </script>
@@ -32,6 +34,7 @@ nav {
 }
 
 nav.open {
+  transition-delay: 2.2s;
   width: 250px;
 }
 

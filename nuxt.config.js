@@ -23,16 +23,14 @@ export default {
       },
       { href: 'https://css.gg/css', rel: 'stylesheet' },
     ],
+    script: [],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [
-    { src: '~/plugins/ScrollMagic.js', mode: 'client' },
-    { src: '~/plugins/vue2-touch-events.js', mode: 'client' },
-  ],
+  plugins: [{ src: '~/plugins/vue2-touch-events.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -48,6 +46,7 @@ export default {
     babel: {
       plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
     },
+    transpile: ['gsap'],
   },
 
   fontawesome: {

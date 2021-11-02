@@ -50,12 +50,12 @@ a::after,
   background: var(--foreground-color);
 }
 
-a.dark,
-.text-link.dark a {
+a.invert,
+.text-link.invert a {
   color: var(--background-color);
 }
-a.dark::after,
-.text-link.dark::after {
+a.invert::after,
+.text-link.invert::after {
   background: var(--background-color);
 }
 
@@ -86,7 +86,7 @@ p {
   justify-content: center;
 }
 
-.container.dark {
+.container.invert {
   background: var(--foreground-color);
 }
 

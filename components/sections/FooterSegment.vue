@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="footer-segment">
     <img src="~/assets/astro.svg" alt="Astronaut floating" class="astronaut" />
     <div>
       Crafted with
@@ -36,8 +36,6 @@ footer {
   fill: #e25555;
 }
 
-
-
 @keyframes astroFloat {
   0% {
     transform: translateY(0px);
@@ -51,6 +49,4 @@ footer {
     transform: translateY(0px);
   }
 }
-
-
 </style>

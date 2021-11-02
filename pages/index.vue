@@ -1,41 +1,22 @@
 <template>
   <div class="main-container">
-    <div class="navigation" v-if="false">
-      <ul>
-        <li>
-          <a> ABOUT </a>
-        </li>
-        <li>
-          <a> WORK </a>
-        </li>
-        <li>
-          <a> BLOG </a>
-        </li>
-        <li>
-          <a> CONTACT </a>
-        </li>
-      </ul>
-    </div>
-    <div class="fullscreen-container">
+    <div class="fullscreen-container" id="logo-segment">
       <logo-segment />
     </div>
-    <div class="container">
+    <div class="container" id="about-segment">
       <about-segment />
     </div>
-    <div class="container dark">
+    <div class="container invert" id="work-segment">
       <work-segment />
     </div>
-    <div class="container">
+    <div class="container" id="blog-segment">
       <blog-segment />
     </div>
-    <div class="container dark">
+    <div class="container invert" id="contact-segment">
       <contact-segment />
     </div>
     <div class="container night-sky">
       <footer-segment />
-      <div class="stars" id="stars"></div>
-      <div class="stars" id="stars2"></div>
-      <div class="stars" id="stars3"></div>
     </div>
   </div>
 </template>
@@ -47,6 +28,7 @@ import ContactSegmentVue from '~/components/sections/ContactSegment.vue'
 import FooterSegmentVue from '~/components/sections/FooterSegment.vue'
 import LogoSegmentVue from '~/components/sections/LogoSegment.vue'
 import WorkSegmentVue from '~/components/sections/WorkSegment.vue'
+import { initAnimation } from '~/animation'
 
 export default {
   components: {
@@ -56,6 +38,10 @@ export default {
     'blog-segment': BlogSegmentVue,
     'contact-segment': ContactSegmentVue,
     'footer-segment': FooterSegmentVue,
+  },
+
+  mounted() {
+    initAnimation()
   },
 }
 </script>
@@ -96,12 +82,5 @@ export default {
 }
 .navigation li a {
   color: #fff;
-}
-.stars {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  height: 100px;
 }
 </style>

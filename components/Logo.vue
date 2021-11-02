@@ -1,25 +1,17 @@
 <template>
-  <div class="logo" :class="{'open': isOpen, close: !isOpen}" @click="toggle">
+  <div class="logo" @click="scrollToAbout">
     <div class="title">Daniel Ilievski</div>
     <div class="subtitle">Building awesome apps.</div>
   </div>
 </template>
 
 <script>
+import gsap from 'gsap'
 export default {
-  data: () => ({
-    isOpen: true
-  }),
   methods: {
-    close() {
-      this.isOpen = false;
+    scrollToAbout() {
+      gsap.to(window, { duration: 1, scrollTo: '#about-segment' })
     },
-    open() {
-      this.isOpen = true;
-    },
-    toggle() {
-      this.isOpen = !this.isOpen;
-    }
   },
 }
 </script>
@@ -32,7 +24,6 @@ export default {
 
   overflow: hidden;
 
-  
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
 
@@ -51,13 +42,14 @@ export default {
 }
 
 .logo.open {
-  animation-delay: 2s;
   animation-name: grow;
+  animation-delay: 1s;
 }
 
 .logo.close {
   animation-delay: 0s;
   animation-name: shrink;
+  animation-duration: 1s;
 }
 
 .title {
