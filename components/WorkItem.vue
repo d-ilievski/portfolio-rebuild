@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="left">
-      <div class="image">
+      <div class="image" v-if="item.image">
         <div class="image-backdrop"></div>
         <div class="image-container">
           <img :src="require(`@/assets/${item.image}`)" />
@@ -19,7 +19,8 @@
           v-for="(t, index) in item.technologies"
           :key="index"
         >
-          <fa class="icon" :icon="t.icon" />
+          <fa v-if="t.icon.length > 1" class="icon" :icon="t.icon" />
+          <v-icon v-else :size="4" :icon="t.icon[0]"></v-icon>
           <div class="icon-desc">{{ t.name }}</div>
         </div>
       </div>
@@ -28,9 +29,13 @@
 </template>
 
 <script>
+import Icon from '@/components/Icon.vue'
 export default {
   props: {
     item: Object,
+  },
+  components: {
+    'v-icon': Icon,
   },
 }
 </script>
@@ -57,6 +62,7 @@ export default {
 .wrapper .right {
   flex: 1;
   margin-left: 64px;
+  padding-right: 32px;
 }
 
 .image-container {
@@ -94,12 +100,14 @@ export default {
 
 .icons {
   margin-top: 32px;
-  font-size: 3em;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
 }
 .icon-container {
   position: relative;
   display: inline-block;
-  margin: 0px 8px;
+  margin: 0px 16px;
 }
 .icon {
   opacity: 0.5;

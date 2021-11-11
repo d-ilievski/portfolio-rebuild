@@ -113,7 +113,6 @@ export default {
         toggleActions: 'restart',
         start: 'top center',
         end: 'bottom center',
-        markers: true,
       },
       height: 'auto',
       delay: 2,

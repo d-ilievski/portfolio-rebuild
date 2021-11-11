@@ -159,4 +159,21 @@ p {
 #skills-technologies-title {
   opacity: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    display: block;
+  }
+
+  .wrapper .left {
+    width: 300px;
+    margin: auto;
+  }
+
+  .wrapper .right {
+    flex: 1;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+}
 </style>

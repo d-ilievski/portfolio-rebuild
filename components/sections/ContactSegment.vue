@@ -7,7 +7,14 @@
       class="close"
     />
     <div class="wrapper">
-      <div class="left">
+      <!-- <div class="left">
+      </div>
+      <div class="right">
+        <button>
+          <span>Grab my cv <fa :icon="['fas', 'download']" /></span>
+        </button>
+      </div> -->
+      <div class="contact-info-content">
         <p>
           If you would like to build something great or just say hi, email me at
           <a
@@ -45,11 +52,6 @@
           where I post some pictures I take.
         </p>
       </div>
-      <div class="right">
-        <!-- <button>
-          <span>Grab my cv <fa :icon="['fas', 'download']" /></span>
-        </button> -->
-      </div>
     </div>
   </div>
 </template>
@@ -62,7 +64,6 @@ export default {}
 .wrapper {
   display: flex;
   align-items: flex-start;
-  width: 100%;
   color: var(--background-color);
 }
 
@@ -126,5 +127,9 @@ button span::after {
 }
 button:hover span::after {
   right: 0%;
+}
+
+.contact-info-content {
+  padding: 0 64px;
 }
 </style>

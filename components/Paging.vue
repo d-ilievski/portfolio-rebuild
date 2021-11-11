@@ -1,29 +1,34 @@
 <template>
-  <div class="container" :class="{ invert }">
-    <div v-if="arrows" class="navigate-left" @click="prev">
-      <span>&lt;</span>
-    </div>
-    <div v-if="arrows" class="navigate-right" @click="next">
-      <span>&gt;</span>
-    </div>
-    <div
-      class="wrapper"
-      v-touch:swipe.right="prev"
-      v-touch:swipe.left="next"
-      v-touch:swipe.up="(e) => e.preventDefault()"
-      v-touch:swipe.down="(e) => e.preventDefault()"
-    >
-      <div class="box">
-        <div class="pages" :style="{ left: left + 'px' }">
-          <span
-            v-for="i in numTotalPages"
-            :key="i"
-            :class="{ accent: i === page }"
-            v-touch:tap="() => setPage(i)"
-            >{{ i }}</span
-          >
+  <div>
+    <div class="container" :class="{ invert }">
+      <div v-if="arrows" class="navigate-left" @click="prev">
+        <span>&lt;</span>
+      </div>
+      <div v-if="arrows" class="navigate-right" @click="next">
+        <span>&gt;</span>
+      </div>
+      <div
+        class="wrapper"
+        v-touch:swipe.right="prev"
+        v-touch:swipe.left="next"
+        v-touch:swipe.up="(e) => e.preventDefault()"
+        v-touch:swipe.down="(e) => e.preventDefault()"
+      >
+        <div class="box">
+          <div class="pages" :style="{ left: left + 'px' }">
+            <span
+              v-for="i in numTotalPages"
+              :key="i"
+              :class="{ accent: i === page }"
+              v-touch:tap="() => setPage(i)"
+              >{{ i }}</span
+            >
+          </div>
         </div>
       </div>
+    </div>
+    <div class="autoplay-controls" @click="toggleAutoplay">
+      {{ isAutoplayPaused ? 'autoplay' : 'pause' }}
     </div>
   </div>
 </template>
@@ -33,6 +38,8 @@ export default {
   data() {
     return {
       page: 1,
+      isAutoplayPaused: false,
+      autoplayIntervalInstance: null,
     }
   },
   props: {
@@ -42,24 +49,41 @@ export default {
   },
   methods: {
     next: function () {
-      if (this.page === this.numTotalPages) {
-        this.page = 1
+      let page = this.page
+      if (page === this.numTotalPages) {
+        page = 1
       } else {
-        this.page++
+        page++
       }
-      this.$emit('change', { page: this.page })
+      this.setPage(page)
     },
     prev: function () {
-      if (this.page === 1) {
-        this.page = this.numTotalPages
+      let page = this.page
+      if (page === 1) {
+        page = this.numTotalPages
       } else {
-        this.page--
+        page--
       }
-      this.$emit('change', { page: this.page })
+      this.setPage(page)
     },
     setPage: function (page) {
       this.page = page
+      this.resetInterval()
       this.$emit('change', { page: this.page })
+    },
+    resetInterval: function () {
+      clearInterval(this.autoplayIntervalInstance)
+      this.autoplayIntervalInstance = setInterval(() => {
+        this.next()
+      }, 10000)
+    },
+    toggleAutoplay: function () {
+      this.isAutoplayPaused = !this.isAutoplayPaused
+      if (!this.isAutoplayPaused) {
+        this.resetInterval()
+      } else {
+        clearInterval(this.autoplayIntervalInstance)
+      }
     },
   },
   computed: {
@@ -69,9 +93,7 @@ export default {
     },
   },
   mounted() {
-    setInterval(() => {
-      this.next()
-    }, 5000)
+    this.resetInterval()
   },
 }
 </script>
@@ -218,5 +240,18 @@ export default {
 .container.invert .pages span {
   border-color: var(--background-color);
   color: var(--background-color);
+}
+
+.autoplay-controls {
+  position: relative;
+  text-align: center;
+  color: white;
+  transition: opacity linear 0.5s;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.autoplay-controls:hover {
+  opacity: 0.5;
 }
 </style>

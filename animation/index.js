@@ -26,8 +26,8 @@ const initSegmentTitles = (titles) => {
         end: 'bottom center', // we want contact to remain visible when scrolled to bottom
         onEnter: () => toggleOpenClass(element),
         onEnterBack: () => toggleOpenClass(element),
-        onLeave: () => toggleOpenClass(element),
-        onLeaveBack: () => toggleOpenClass(element),
+        onLeave: () => title !== 'blog' && toggleOpenClass(element), // this stays like this until blog gets some content
+        onLeaveBack: () => title !== 'blog' && toggleOpenClass(element),
       },
     })
   })
