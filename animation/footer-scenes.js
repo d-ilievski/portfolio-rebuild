@@ -9,7 +9,6 @@ export default {
         start: 'top center',
         end: 'center bottom',
         scrub: 1,
-        markers: true,
       },
       delay: 2,
       y: 500,
