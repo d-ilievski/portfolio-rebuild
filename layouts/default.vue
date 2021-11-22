@@ -36,6 +36,7 @@ a,
   font-weight: bold;
   cursor: pointer;
   position: relative;
+  white-space: nowrap;
 }
 
 a::after,
@@ -104,5 +105,12 @@ p {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+  .segment-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 </style>

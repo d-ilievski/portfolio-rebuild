@@ -32,6 +32,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .logo-close-trigger {

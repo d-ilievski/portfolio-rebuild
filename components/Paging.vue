@@ -254,4 +254,14 @@ export default {
 .autoplay-controls:hover {
   opacity: 0.5;
 }
+
+@media screen and (max-width: 480px) {
+  .paging {
+    margin-top: 0;
+  }
+
+  .autoplay-controls {
+    margin-top: 24px;
+  }
+}
 </style>

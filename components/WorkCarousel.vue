@@ -13,7 +13,6 @@
             :style="{
               width: `${itemWidth}px`,
               maxWidth: '40%',
-              margin: 'auto',
             }"
             :key="item.id"
             :item="item"
@@ -114,5 +113,12 @@ export default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 480px) {
+  .work-items-container {
+    height: fit-content;
+    overflow: hidden;
+  }
 }
 </style>

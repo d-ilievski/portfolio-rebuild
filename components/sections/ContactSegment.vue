@@ -32,9 +32,10 @@
               href="https://www.linkedin.com/in/daniel-ilievski/"
               target="_blank"
             >
-              <fa :icon="['fab', 'linkedin']" /> LinkedIn
+              <fa :icon="['fab', 'linkedin']" /> LinkedIn,
             </a></span
-          >, see some of my projects on
+          >
+          see some of my projects on
           <span class="text-link invert"
             ><a
               href="https://github.com/d-ilievski"
@@ -131,5 +132,8 @@ button:hover span::after {
 
 .contact-info-content {
   padding: 0 64px;
+}
+
+@media screen and (max-width: 480px) {
 }
 </style>

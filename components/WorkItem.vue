@@ -50,6 +50,7 @@ export default {
   display: flex;
   align-items: flex-start;
   width: 100%;
+  height: fit-content;
 }
 
 .wrapper .left {
@@ -127,5 +128,11 @@ export default {
   opacity: 0;
   transition: opacity 0.2s linear;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper .right {
+    margin-left: 0;
+  }
 }
 </style>

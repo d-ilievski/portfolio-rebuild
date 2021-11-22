@@ -58,7 +58,7 @@ export default {
 }
 
 .subtitle {
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 @keyframes grow {
@@ -138,14 +138,42 @@ export default {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .logo {
     transform: scale(0.8);
   }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-size: 100%;
+    margin-left: -0.4rem;
+  }
 }
-@media only screen and (max-width: 400px) {
-  .logo {
-    transform: scale(0.6);
+
+@media only screen and (max-width: 330px) {
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: -0.2rem;
+  }
+
+  .subtitle {
+    font-size: 100%;
+    margin-left: -0.4rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 2rem;
   }
 }
 </style>
