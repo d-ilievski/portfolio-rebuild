@@ -6,11 +6,12 @@ export default {
       scrollTrigger: {
         trigger: '#contact-segment',
         toggleActions: 'restart',
-        start: 'center center',
+        start: 'top center',
         end: 'center bottom',
         scrub: 1,
+        markers: true,
       },
-      delay: 1,
+      delay: 2,
       y: 500,
       opacity: 0,
     })
