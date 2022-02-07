@@ -7,10 +7,9 @@ import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import ScrollToPlugin from 'gsap/ScrollToPlugin'
 
-const toggleOpenClass = (elementQuery) => {
+const addOpenClass = (elementQuery) => {
   const element = document.querySelector(elementQuery)
-  element.classList.toggle('open')
-  element.classList.toggle('close')
+  if (!element.classList.contains('open')) element.classList.add('open')
 }
 
 const initSegmentTitles = (titles) => {
@@ -19,15 +18,16 @@ const initSegmentTitles = (titles) => {
     const trigger = `#${title}-segment`
     gsap.to(element, {
       scrollTrigger: {
+        markers: true,
         trigger,
-        toggleActions: 'restart none none none',
+        toggleActions: 'play none none none',
         start: 'top center',
-        // end: title !== 'contact' ? 'center center' : 'bottom center', // we want contact to remain visible when scrolled to bottom
-        end: 'bottom center', // we want contact to remain visible when scrolled to bottom
-        onEnter: () => toggleOpenClass(element),
-        onEnterBack: () => toggleOpenClass(element),
-        onLeave: () => title !== 'blog' && toggleOpenClass(element), // this stays like this until blog gets some content
-        onLeaveBack: () => title !== 'blog' && toggleOpenClass(element),
+        end: title !== 'contact' ? 'center center' : 'bottom center', // we want contact to remain visible when scrolled to bottom
+        end: 'center top', // we want contact to remain visible when scrolled to bottom
+        onEnter: () => addOpenClass(element),
+        // onEnterBack: () => toggleOpenClass(element),
+        // onLeave: () => title !== 'blog' && toggleOpenClass(element), // this stays like this until blog gets some content
+        // onLeaveBack: () => title !== 'blog' && toggleOpenClass(element),
       },
     })
   })

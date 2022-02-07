@@ -47,16 +47,6 @@ export default {
   animation: underline 0.25s ease-in-out 0s forwards;
 }
 
-.title-container.close .title {
-  transform: translateY(0px);
-  animation: title-appear-close 0.5s ease-in-out 0s forwards;
-}
-
-.title-container.close .underline {
-  right: 0;
-  animation: underline-close 0.25s ease-in-out 0.5s forwards;
-}
-
 .title-container.invert .title {
   color: var(--background-color);
 }
@@ -81,24 +71,6 @@ export default {
 
   100% {
     transform: translateY(0px);
-  }
-}
-
-@keyframes underline-close {
-  0% {
-    right: 0%;
-  }
-  100% {
-    right: 100%;
-  }
-}
-
-@keyframes title-appear-close {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(50px);
   }
 }
 </style>

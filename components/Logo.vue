@@ -43,7 +43,7 @@ export default {
 
 .logo.open {
   animation-name: grow;
-  animation-delay: 1s;
+  animation-delay: 2s;
 }
 
 .logo.close {

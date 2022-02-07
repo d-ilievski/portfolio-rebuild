@@ -5,7 +5,7 @@ export default {
     gsap.to('.person', {
       scrollTrigger: {
         trigger: '#about-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'top center',
         end: 'center center',
         scrub: 1,
@@ -25,10 +25,9 @@ export default {
       {
         scrollTrigger: {
           trigger: '#about-segment',
-          toggleActions: 'restart',
+          toggleActions: 'play none none none',
           start: 'top center',
           end: 'center bottom',
-          scrub: 1,
         },
         y: 0,
         opacity: 1,
@@ -44,10 +43,9 @@ export default {
       {
         scrollTrigger: {
           trigger: '#about-segment',
-          toggleActions: 'restart',
+          toggleActions: 'play none none none',
           start: '30% center',
           end: 'center bottom',
-          scrub: 1,
         },
         y: 0,
         opacity: 1,
@@ -64,10 +62,9 @@ export default {
       {
         scrollTrigger: {
           trigger: '#about-segment',
-          toggleActions: 'restart',
+          toggleActions: 'play none none none',
           start: '30% center',
           end: 'center bottom',
-          scrub: 1,
         },
         stagger: 0.1,
         delay: 0.2,
@@ -80,13 +77,13 @@ export default {
     gsap.from('.slider-row', {
       scrollTrigger: {
         trigger: '#about-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'center center',
         end: 'center bottom',
         // scrub: 1,
       },
       stagger: 0.5,
-      opacity: 0,
+      // opacity: 0,
     })
 
     // name card animation
@@ -98,19 +95,19 @@ export default {
       {
         scrollTrigger: {
           trigger: '#about-segment',
-          toggleActions: 'restart',
+          toggleActions: 'play none none none',
           start: 'top center',
           end: '30% center',
-          scrub: 1,
         },
         opacity: 1,
+        duration: 0.5,
       }
     )
 
     gsap.to('.name-card', {
       scrollTrigger: {
         trigger: '#about-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'top center',
         end: 'bottom center',
       },

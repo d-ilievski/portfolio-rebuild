@@ -263,5 +263,10 @@ export default {
   .autoplay-controls {
     margin-top: 24px;
   }
+
+  .navigate-left,
+  .navigate-right {
+    font-size: 3.5rem;
+  }
 }
 </style>

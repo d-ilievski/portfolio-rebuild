@@ -5,7 +5,7 @@ export default {
     gsap.from('#footer-segment', {
       scrollTrigger: {
         trigger: '#contact-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'top center',
         end: 'center bottom',
         scrub: 1,

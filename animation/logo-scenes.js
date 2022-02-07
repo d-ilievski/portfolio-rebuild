@@ -18,13 +18,13 @@ export default {
     gsap.to('.logo', {
       scrollTrigger: {
         trigger: '#logo-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'top 1px',
         end: '70% center',
         onEnter: () => toggleOpenClass('.logo'),
-        onEnterBack: () => toggleOpenClass('.logo'),
-        onLeave: () => toggleOpenClass('.logo'),
-        onLeaveBack: () => toggleOpenClass('.logo'),
+        // onEnterBack: () => toggleOpenClass('.logo'),
+        // onLeave: () => toggleOpenClass('.logo'),
+        // onLeaveBack: () => toggleOpenClass('.logo'),
       },
     })
 

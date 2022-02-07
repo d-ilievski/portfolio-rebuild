@@ -6,9 +6,9 @@ export default {
     gsap.from('#contact-segment .left p', {
       scrollTrigger: {
         trigger: '#contact-segment',
-        toggleActions: 'restart',
+        toggleActions: 'play none none none',
         start: 'top center',
-        end: 'center bottom',
+        end: 'bottom bottom',
         scrub: 1,
       },
       delay: 1,

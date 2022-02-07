@@ -11,7 +11,7 @@ export default {
       {
         scrollTrigger: {
           trigger: '#blog-segment',
-          toggleActions: 'restart',
+          toggleActions: 'play none none none',
           start: 'top center',
           end: 'bottom bottom',
           scrub: 1,
