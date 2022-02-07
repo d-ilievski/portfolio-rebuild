@@ -2,14 +2,8 @@ import gsap from 'gsap'
 
 const toggleOpenClass = (selector) => {
   const element = document.querySelector(selector)
-  if (
-    !element.classList.contains('open') &&
-    !element.classList.contains('close')
-  ) {
+  if (!element.classList.contains('open')) {
     element.classList.add('open')
-  } else {
-    element.classList.toggle('open')
-    element.classList.toggle('close')
   }
 }
 
