@@ -1,5 +1,15 @@
 <template>
   <div class="main-container">
+    <fa
+      class="icon"
+      :class="{ open: mobileMenuOpen }"
+      :icon="['fas', 'chevron-circle-down']"
+      @click="toggleMobileMenuOpen"
+    />
+    <mobile-menu
+      :open="mobileMenuOpen"
+      @selected="toggleMobileMenuOpen"
+    ></mobile-menu>
     <div class="fullscreen-container" id="logo-segment">
       <logo-segment />
     </div>
@@ -29,6 +39,7 @@ import FooterSegmentVue from '~/components/sections/FooterSegment.vue'
 import LogoSegmentVue from '~/components/sections/LogoSegment.vue'
 import WorkSegmentVue from '~/components/sections/WorkSegment.vue'
 import { initAnimation } from '~/animation'
+import MobileMenuVue from '~/components/MobileMenu.vue'
 
 export default {
   components: {
@@ -38,8 +49,16 @@ export default {
     'blog-segment': BlogSegmentVue,
     'contact-segment': ContactSegmentVue,
     'footer-segment': FooterSegmentVue,
+    'mobile-menu': MobileMenuVue,
   },
-
+  data: () => ({
+    mobileMenuOpen: false,
+  }),
+  methods: {
+    toggleMobileMenuOpen: function () {
+      this.mobileMenuOpen = !this.mobileMenuOpen
+    },
+  },
   mounted() {
     initAnimation()
   },
@@ -82,5 +101,29 @@ export default {
 }
 .navigation li a {
   color: #fff;
+}
+
+.icon {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .icon {
+    display: block;
+    position: fixed;
+    color: var(--background-color);
+    font-size: 50px;
+    mix-blend-mode: difference;
+    top: 20px;
+    left: 0px;
+    padding: 10px;
+    transition: transform 0.2s linear, top 0.2s linear;
+    z-index: 2;
+  }
+
+  .icon.open {
+    transform: rotate(180deg);
+    top: 252px;
+  }
 }
 </style>

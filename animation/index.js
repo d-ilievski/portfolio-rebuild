@@ -18,7 +18,6 @@ const initSegmentTitles = (titles) => {
     const trigger = `#${title}-segment`
     gsap.to(element, {
       scrollTrigger: {
-        markers: true,
         trigger,
         toggleActions: 'play none none none',
         start: 'top center',
