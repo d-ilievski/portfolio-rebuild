@@ -5,61 +5,48 @@
       <div class="left">
         <div class="name-card">
           <div class="image-container">
-            <img
-              alt="A picture of Daniel's Room"
-              src="~/assets/profile-photo-bg.jpg"
-            />
-            <img
-              alt="A picture of Daniel Ilievski"
-              src="~/assets/profile-photo.png"
-              class="person"
-            />
+            <img alt="A picture of Daniel's Room" src="~/assets/profile-photo-bg.jpg" />
+            <img alt="A picture of Daniel Ilievski" src="~/assets/profile-photo.png" class="person" />
           </div>
           <h3>Who's this guy?</h3>
           <p>
-            My name is Daniel Ilievski and I live in
-            <a
-              class="grow"
-              target="_blank"
-              href="https://www.google.com/maps/place/Amsterdam"
-              ><strong>Amsterdam</strong></a
-            >. Working as an IT Engineer at
-            <a class="grow" target="_blank" href="https://www.abnamro.com/">
-              <strong>ABN AMRO</strong></a
-            >.
+            My name is Daniel Ilievski. I love creating user-centric tech products that solve
+            customer pain points with focus on intuitive UX and clean code practices.
           </p>
           <p>
-            I love creating user-centric tech products with captivating UIs and
-            intuitive UX.
+            I live in
+            <a class="grow" target="_blank"
+              href="https://www.google.com/maps/place/Amsterdam"><strong>Amsterdam</strong></a> and work as an IT
+            Engineer at
+            <a class="grow" target="_blank" href="https://www.abnamro.com/">
+              <strong>ABN AMRO</strong></a>.
           </p>
-          <span @click="navigateToContact" class="text-link cta"
-            ><strong>Lets create something great!</strong></span
-          >
+          <span @click="navigateToContact" class="text-link cta"><strong>Lets create something great!</strong></span>
         </div>
       </div>
       <div class="right">
         <p class="experience">
-          With 4 years of experience in the industry, I've worked, both as a
-          backend and a frontend engineer on successful products in the Internet
-          banking, gaming &amp; gambling, and IT service-providing industries.
+          Throught my years of experience in the industry, I've worked as a software engineer developing successful
+          products in the Internet
+          banking, gaming, and IT consultancy industries.
         </p>
         <h2 id="skills-technologies-title">Skills &amp; Technologies</h2>
         <ul class="skills-list">
           <li>
             <span>Skills: </span>
-            Web Development, App Development, UI/UX design
+            Web Development, Product Research, Product Management, Prototyping
           </li>
           <li>
             <span>Languages: </span>
             JavaScript, TypeScript
           </li>
           <li>
-            <span>Libraries: </span>
-            React, Vue.јs, Node.js, Express
+            <span>Frameworks: </span>
+            React, Vue, Node.js, Express
           </li>
           <li>
             <span>Tools: </span>
-            Figma, Adobe Illustrator
+            Figma, Adobe Creative Suite
           </li>
           <li>
             <span>Cloud: </span>

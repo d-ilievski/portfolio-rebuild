@@ -1,33 +1,21 @@
 <template>
   <div class="work-carousel">
+    <paging class="paging" v-if="items.length" :numTotalPages="items.length" :arrows="true"
+      @change="({ page }) => setIndex(page - 1)" invert></paging>
+
     <div class="work-items-container" ref="carouselContainer">
-      <div
-        class="work-items-wrapper"
-        :style="{
-          width: `${items.length * itemWidth}px`,
-          transform: `translateX(${currentPositionPx}px)`,
-        }"
-      >
+      <div class="work-items-wrapper" ref="workItemsWrapper" :style="{
+        width: `${items.length * itemWidth}px`,
+        transform: `translateX(${currentPositionPx}px)`,
+      }">
         <template v-for="item in items">
-          <work-item
-            :style="{
-              width: `${itemWidth}px`,
-              maxWidth: '40%',
-            }"
-            :key="item.id"
-            :item="item"
-          ></work-item>
+          <work-item :style="{
+            width: `${itemWidth}px`,
+            maxWidth: '40%',
+          }" :key="item.id" :item="item"></work-item>
         </template>
       </div>
     </div>
-    <paging
-      class="paging"
-      v-if="items.length"
-      :numTotalPages="items.length"
-      :arrows="true"
-      @change="({ page }) => setIndex(page - 1)"
-      invert
-    ></paging>
   </div>
 </template>
 
@@ -37,6 +25,9 @@ export default {
     return {
       currentItemIndex: 0,
       itemWidth: 0,
+      // pressed: false,
+      // dragStartX: 0,
+      // x: 0,
     }
   },
   props: {
@@ -52,9 +43,26 @@ export default {
     setItemWidth: function () {
       this.itemWidth = this.$refs.carouselContainer.offsetWidth
     },
+    // handleMouseDown: function (e) {
+    //   this.pressed = true;
+    //   this.sdragStartX = e.offsetX - this.$refs.workItemsWrapper.offsetLeft;
+    // },
+    // handleMouseUp: function () {
+    //   this.pressed = false;
+    // },
+    // handleMouseMove: function (e) {
+    //   if (!this.pressed) return;
+
+    //   this.x = e.offsetX;
+
+    //   // this.setIndex(this.currentItemIndex + 1)
+    // },
   },
   computed: {
     currentPositionPx: function () {
+      // if (this.pressed) {
+      //   return -(this.x - this.dragStartX)
+      // }
       const basePosition = this.currentItemIndex * this.itemWidth * -1
       //   if (this.currentItemIndex) return basePosition - 100
       return basePosition
@@ -81,7 +89,7 @@ export default {
 
 .work-items-container {
   width: 100%;
-  height: 350px;
+  height: 390px;
   overflow-x: hidden;
 }
 
@@ -91,7 +99,7 @@ export default {
 }
 
 .paging {
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* width */

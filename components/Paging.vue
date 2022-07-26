@@ -7,28 +7,23 @@
       <div v-if="arrows" class="navigate-right" @click="next">
         <span>&gt;</span>
       </div>
-      <div
-        class="wrapper"
-        v-touch:swipe.right="prev"
-        v-touch:swipe.left="next"
-        v-touch:swipe.up="(e) => e.preventDefault()"
-        v-touch:swipe.down="(e) => e.preventDefault()"
-      >
+      <div class="wrapper" v-touch:swipe.right="prev" v-touch:swipe.left="next"
+        v-touch:swipe.up="(e) => e.preventDefault()" v-touch:swipe.down="(e) => e.preventDefault()">
         <div class="box">
           <div class="pages" :style="{ left: left + 'px' }">
-            <span
-              v-for="i in numTotalPages"
-              :key="i"
-              :class="{ accent: i === page }"
-              v-touch:tap="() => setPage(i)"
-              >{{ i }}</span
-            >
+            <span v-for="i in numTotalPages" :key="i" :class="{ accent: i === page }" v-touch:tap="() => setPage(i)">{{
+                i
+            }}</span>
           </div>
         </div>
       </div>
     </div>
     <div class="autoplay-controls" @click="toggleAutoplay">
       {{ isAutoplayPaused ? 'autoplay' : 'pause' }}
+    </div>
+    <div class="progress-bar" :class="{ 'paused': isAutoplayPaused }">
+      <div class="bar" ref="progressBarAnimated"></div>
+      <div class="background"></div>
     </div>
   </div>
 </template>
@@ -72,10 +67,17 @@ export default {
       this.$emit('change', { page: this.page })
     },
     resetInterval: function () {
+
       clearInterval(this.autoplayIntervalInstance)
+
       this.autoplayIntervalInstance = setInterval(() => {
         this.next()
       }, 10000)
+
+      // reset animation
+      this.$refs.progressBarAnimated.style.animation = "none";
+      this.$refs.progressBarAnimated.offsetHeight;
+      this.$refs.progressBarAnimated.style.animation = null;
     },
     toggleAutoplay: function () {
       this.isAutoplayPaused = !this.isAutoplayPaused
@@ -124,23 +126,19 @@ export default {
 .navigate-left {
   left: 0;
   right: 80%;
-  background: linear-gradient(
-    90deg,
-    var(--foreground-color) 0%,
-    var(--foreground-color) 45%,
-    rgba(34, 32, 33, 0) 100%
-  );
+  background: linear-gradient(90deg,
+      var(--foreground-color) 0%,
+      var(--foreground-color) 45%,
+      rgba(34, 32, 33, 0) 100%);
 }
 
 .navigate-right {
   right: 0;
   left: 80%;
-  background: linear-gradient(
-    -90deg,
-    var(--foreground-color) 0%,
-    var(--foreground-color) 45%,
-    rgba(34, 32, 33, 0) 100%
-  );
+  background: linear-gradient(-90deg,
+      var(--foreground-color) 0%,
+      var(--foreground-color) 45%,
+      rgba(34, 32, 33, 0) 100%);
 }
 
 .navigate-right span,
@@ -189,10 +187,12 @@ export default {
   text-align: center;
   line-height: 1.1;
 }
+
 .pages span:hover {
   opacity: 0.5;
   cursor: pointer;
 }
+
 .pages span.accent {
   opacity: 1;
 }
@@ -200,6 +200,7 @@ export default {
 .draw {
   transition: color 0.25s;
 }
+
 .draw::before,
 .draw::after {
   border: 2px solid transparent;
@@ -251,6 +252,36 @@ export default {
   cursor: pointer;
 }
 
+.progress-bar {
+  position: relative;
+  width: 100px;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.progress-bar.paused {
+  display: none;
+}
+
+.progress-bar .background {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: white;
+  opacity: 0.2;
+}
+
+.progress-bar .bar {
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 2px;
+  background: white;
+  opacity: 0.5;
+  animation: progressBar 10s linear infinite;
+}
+
 .autoplay-controls:hover {
   opacity: 0.5;
 }
@@ -267,6 +298,16 @@ export default {
   .navigate-left,
   .navigate-right {
     font-size: 3.5rem;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
   }
 }
 </style>

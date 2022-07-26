@@ -112,7 +112,7 @@ export default {
         end: 'bottom center',
       },
       height: 'auto',
-      delay: 2,
+      delay: 1,
       duration: 0.5,
     })
   },
