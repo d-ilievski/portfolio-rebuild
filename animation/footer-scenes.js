@@ -8,9 +8,9 @@ export default {
         toggleActions: 'play none none none',
         start: 'top center',
         end: 'center bottom',
-        scrub: 1,
+        // scrub: 1,
       },
-      delay: 2,
+      delay: 0.5,
       y: 500,
       opacity: 0,
     })

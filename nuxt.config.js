@@ -15,7 +15,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          "My name is Daniel Ilievski. With 4 years of experience in the industry, I've worked, both as a backend and a frontend engineer on successful products in the Internet banking, gaming & gambling, and IT service-providing industries. I love creating user-centric tech products with captivating UIs and intuitive UX.",
+          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
       },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
@@ -44,8 +44,14 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
+        rel: 'preload',
+        as: 'style',
       },
-      { href: 'https://css.gg/css', rel: 'stylesheet' },
+      {
+        href: 'https://css.gg/css',
+        rel: 'stylesheet',
+        rel: 'preconnect',
+      },
     ],
     script: [],
   },
@@ -60,7 +66,7 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/fontawesome'],
+  buildModules: ['@nuxtjs/fontawesome', '@nuxt/image'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],

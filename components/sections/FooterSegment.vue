@@ -1,6 +1,6 @@
 <template>
   <footer id="footer-segment">
-    <img src="~/assets/astro.svg" alt="Astronaut floating" class="astronaut" />
+    <nuxt-img src="/astro.svg" alt="Astronaut floating" class="astronaut" placeholder />
     <div>
       Crafted with
       <span class="heart">❤</span>
@@ -22,9 +22,11 @@ footer {
   position: relative;
   color: var(--background-color);
 }
+
 .heart {
   color: #e25555;
 }
+
 .astronaut {
   position: absolute;
   bottom: 20px;

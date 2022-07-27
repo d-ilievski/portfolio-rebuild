@@ -4,7 +4,7 @@
       <div class="image" v-if="item.image">
         <div class="image-backdrop"></div>
         <div class="image-container">
-          <img :src="require(`@/assets/${item.image}`)" />
+          <!-- <nuxt-img :src="require(`@/assets/${item.image}`)" /> -->
         </div>
       </div>
     </div>
