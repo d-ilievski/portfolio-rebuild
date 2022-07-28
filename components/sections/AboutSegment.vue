@@ -5,9 +5,8 @@
       <div class="left">
         <div class="name-card">
           <div class="image-container">
-            <nuxt-img format="webp" placeholder alt="A picture of Daniel's Room" src="/profile-photo-bg.jpg" />
-            <nuxt-img format="webp" placeholder alt="A picture of Daniel Ilievski" src="/profile-photo.png"
-              class="person" />
+            <nuxt-img format="webp" alt="A picture of Daniel's Room" src="/profile-photo-bg.jpg" />
+            <nuxt-img format="webp" alt="A picture of Daniel Ilievski" src="/profile-photo.png" class="person" />
           </div>
           <h3>Who's this guy?</h3>
           <p>

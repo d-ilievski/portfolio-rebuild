@@ -2,7 +2,12 @@
   <div class="segment-container">
     <segment-title text="Blog" id="blog-segment-title" class="close" />
 
-    <div id="coming-soon">Coming soon!</div>
+
+    <NuxtLink to="/blog" class="unstyled">
+      <div id="coming-soon">
+        Coming soon!
+      </div>
+    </NuxtLink>
   </div>
 </template>
 
@@ -10,5 +15,8 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
+.unstyled::after {
+  display: none;
+}
 </style>

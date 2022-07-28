@@ -42,15 +42,14 @@ export default {
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#8f4db2' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
         rel: 'preload',
+        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
         as: 'style',
       },
       {
+        rel: 'preload',
         href: 'https://css.gg/css',
-        rel: 'stylesheet',
-        rel: 'preconnect',
+        as: 'style',
       },
     ],
     script: [],
