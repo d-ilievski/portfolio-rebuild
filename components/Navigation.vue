@@ -3,7 +3,9 @@
     <ul class="navigation">
       <li @click="navigateTo('about', 1)">ABOUT</li>
       <li @click="navigateTo('work', 2)">WORK</li>
-      <li @click="navigateTo('blog', 3)">BLOG</li>
+      <li>
+        <NuxtLink to="/blog" :style="{ color: 'white' }">BLOG</NuxtLink>
+      </li>
       <li @click="navigateTo('contact', 4)">CONTACT</li>
     </ul>
   </nav>
@@ -66,5 +68,9 @@ nav.open {
 .navigation li:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.unstyled::after {
+  display: none;
 }
 </style>

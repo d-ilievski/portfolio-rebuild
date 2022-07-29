@@ -8,7 +8,7 @@
             <nuxt-img format="webp" alt="A picture of Daniel's Room" src="/profile-photo-bg.jpg" />
             <nuxt-img format="webp" alt="A picture of Daniel Ilievski" src="/profile-photo.png" class="person" />
           </div>
-          <h3>Who's this guy?</h3>
+          <h2 class="name-card-title">Who's this guy?</h2>
           <p>
             My name is Daniel Ilievski. I love creating user-centric tech products that solve
             customer pain points with focus on intuitive UX and clean code practices.
@@ -145,6 +145,14 @@ p {
 
 #skills-technologies-title {
   opacity: 0;
+}
+
+.name-card-title {
+  display: block;
+  font-size: 1.17em;
+  margin: 1rem 0;
+  font-weight: bold;
+  text-transform: none;
 }
 
 @media only screen and (max-width: 600px) {

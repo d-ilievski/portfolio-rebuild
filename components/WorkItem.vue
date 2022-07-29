@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="right">
-      <h1 class="title">{{ item.title }}</h1>
+      <h2 class="title">{{ item.title }}</h2>
       <p class="paragraph" v-for="(p, index) in item.paragraphs" :key="index" v-html="p">
       </p>
       <div class="skills">
@@ -120,6 +120,8 @@ export default {
 
 .title {
   margin-bottom: 24px;
+  display: block;
+  font-size: 2em;
 }
 
 .paragraph {

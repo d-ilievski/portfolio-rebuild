@@ -6,12 +6,22 @@
 
         <NuxtLink to="/#blog-segment-title" class="unstyled">
             Go back
-            </NuxtLink>
+        </NuxtLink>
     </div>
 </template>
 <script>
 export default {
-
+    head() {
+        return {
+            meta: [
+                {
+                    hid: 'og:title',
+                    property: 'og:title',
+                    content: "Blog - Daniel | Building awesome apps",
+                },
+            ]
+        }
+    }
 }
 </script>
 <style scoped>

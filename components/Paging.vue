@@ -97,6 +97,9 @@ export default {
   mounted() {
     this.resetInterval()
   },
+  beforeDestroy: function () {
+    if (!this.isAutoplayPaused) this.toggleAutoplay();
+  }
 }
 </script>
 

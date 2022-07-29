@@ -19,6 +19,55 @@ export default {
       },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
+      { property: 'og:site_name', content: 'I Love Painting' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://www.danielilievski.com/',
+      },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Daniel | Building awesome apps',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '/thumbnail.gif',
+      },
+      { property: 'og:image:width', content: '740' },
+      { property: 'og:image:height', content: '300' },
+
+      { name: 'twitter:site', content: '@vo1dmind' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://www.danielilievski.com',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Daniel | Building awesome apps',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: '/thumbnail.gif',
+      },
     ],
     link: [
       {
@@ -68,7 +117,7 @@ export default {
   buildModules: ['@nuxtjs/fontawesome', '@nuxt/image'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/robots'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
