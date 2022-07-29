@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="paging">
     <div class="container" :class="{ invert }">
       <div v-if="arrows" class="navigate-left" @click="prev">
         <span>&lt;</span>
@@ -71,7 +71,8 @@ export default {
       clearInterval(this.autoplayIntervalInstance)
 
       this.autoplayIntervalInstance = setInterval(() => {
-        this.next()
+        if (!this.isAutoplayPaused)
+          this.next()
       }, 10000)
 
       // reset animation

@@ -19,7 +19,7 @@ export default {
       },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
-      { property: 'og:site_name', content: 'I Love Painting' },
+      { property: 'og:site_name', content: 'Daniel | Building awesome apps' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
@@ -40,7 +40,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '/thumbnail.gif',
+        content: 'https://www.danielilievski.com/thumbnail.gif',
       },
       { property: 'og:image:width', content: '740' },
       { property: 'og:image:height', content: '300' },
@@ -66,7 +66,7 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: '/thumbnail.gif',
+        content: 'https://www.danielilievski.com/thumbnail.gif',
       },
     ],
     link: [
@@ -89,23 +89,18 @@ export default {
       },
       { rel: 'manifest', href: '/site.webmanifest' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#8f4db2' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      {
-        rel: 'preload',
-        href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
-        as: 'style',
-      },
-      {
-        rel: 'preload',
-        href: 'https://css.gg/css',
-        as: 'style',
-      },
+      // { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      // {
+      //   rel: 'preload',
+      //   href: 'https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap',
+      //   as: 'style',
+      // },
     ],
     script: [],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/static/fonts.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [{ src: '~/plugins/vue2-touch-events.js', mode: 'client' }],
@@ -117,7 +112,7 @@ export default {
   buildModules: ['@nuxtjs/fontawesome', '@nuxt/image'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/robots'],
+  modules: ['@nuxtjs/robots', '@nuxtjs/sitemap'],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -133,5 +128,9 @@ export default {
       brands: true,
     },
     component: 'fa',
+  },
+
+  sitemap: {
+    hostname: 'https://www.danielilievski.com/',
   },
 }

@@ -29,7 +29,7 @@ export default {
 
   white-space: nowrap;
 
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
   animation-duration: 1.5s;
 
   border-width: 0px;
@@ -39,11 +39,13 @@ export default {
 
 .logo:hover {
   cursor: pointer;
+  transition: transform .1s linear;
+  transform: scale(1.1);
 }
 
 .logo.open {
   animation-name: grow;
-  animation-delay: 2s;
+  animation-delay: .3s;
 }
 
 .logo.close {
@@ -63,7 +65,8 @@ export default {
 
 @keyframes grow {
   0% {
-    border-width: 5px;
+    border-width: 15px;
+    background-color: black;
     border-style: solid;
     border-color: var(--foreground-color);
     max-width: 0;

@@ -36,7 +36,7 @@ nav {
 }
 
 nav.open {
-  transition-delay: 2.2s;
+  transition-delay: 1.8s;
   width: 250px;
 }
 

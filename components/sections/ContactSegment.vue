@@ -1,11 +1,6 @@
 <template>
   <div class="segment-container">
-    <segment-title
-      invert
-      text="Contact"
-      id="contact-segment-title"
-      class="close"
-    />
+    <segment-title invert text="Contact" id="contact-segment-title" class="close" />
     <div class="wrapper">
       <!-- <div class="left">
       </div>
@@ -17,39 +12,26 @@
       <div class="contact-info-content">
         <p>
           If you would like to build something great or just say hi, email me at
-          <a
-            target="_top"
-            href="mailto:daniel.d.ilievski@gmail.com"
-            class="text-link invert"
-            >daniel.d.ilievski@gmail.com</a
-          >.
+          <a target="_top" href="mailto:daniel.d.ilievski@gmail.com"
+            class="text-link invert">daniel.d.ilievski@gmail.com</a>.
         </p>
 
         <p>
           Also, you can find me on
-          <span class="text-link invert"
-            ><a
-              href="https://www.linkedin.com/in/daniel-ilievski/"
-              target="_blank"
-            >
+          <span class="text-link invert"><a href="https://www.linkedin.com/in/daniel-ilievski/"
+              rel="noopener noreferrer" target="_blank">
               <fa :icon="['fab', 'linkedin']" /> LinkedIn,
-            </a></span
-          >
+            </a></span>
           see some of my projects on
-          <span class="text-link invert"
-            ><a
-              href="https://github.com/d-ilievski"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><fa :icon="['fab', 'github']" /> GitHub</a
-            ></span
-          >
+          <span class="text-link invert"><a href="https://github.com/d-ilievski" rel="noopener noreferrer"
+              target="_blank">
+              <fa :icon="['fab', 'github']" /> GitHub
+            </a></span>
           or check out my
-          <span class="text-link invert"
-            ><a href="https://www.instagram.com/vo1d.mind/" target="_blank"
-              ><fa :icon="['fab', 'instagram']" /> Instagram</a
-            ></span
-          >
+          <span class="text-link invert"><a href="https://www.instagram.com/vo1d.mind/" target="_blank"
+              rel="noopener noreferrer">
+              <fa :icon="['fab', 'instagram']" /> Instagram
+            </a></span>
           where I post some pictures I take.
         </p>
       </div>
@@ -126,6 +108,7 @@ button span::after {
   transition: right 0.2s ease-in-out;
   background: var(--background-color);
 }
+
 button:hover span::after {
   right: 0%;
 }
@@ -134,6 +117,5 @@ button:hover span::after {
   padding: 0 64px;
 }
 
-@media screen and (max-width: 480px) {
-}
+@media screen and (max-width: 480px) {}
 </style>

@@ -16,7 +16,7 @@ export default {
         title: 'Primewood.la',
         paragraphs: [
           'A print on demand web designer application for creating custom skateboards.',
-          'Freelance project available on <a class="text-link invert" href="http://primewood.la/" target="_blank">primewood.la</a>.',
+          'Freelance project available on <a class="text-link invert" href="http://primewood.la/" target="_blank" rel="noopener noreferrer">primewood.la</a>.',
         ],
         technologies: [
           {
@@ -90,7 +90,7 @@ export default {
         title: 'Lori',
         paragraphs: [
           'A web application in a form of a browser extension that reduces the time it takes to design creative materials for social media marketing campaigns. It allows the users to generate multiple marketing assets with a few simple steps.',
-          'Personal project - <a class="text-link invert" href="http://iamlori.app/" target="_blank">iamlori.app</a>'
+          'Personal project - <a class="text-link invert" href="http://iamlori.app/" target="_blank" rel="noopener noreferrer">iamlori.app</a>'
         ],
         technologies: [
           {
@@ -113,7 +113,7 @@ export default {
         title: 'Menusano',
         paragraphs: [
           'Nutrition analysis software, MenuSano. I also developed the front end for the initial version of the nutritional analysis software, along with the admin panel and the nutritional label designer tool.',
-          'Developed as part of EmitKnowledge, available on <a href="http://menusano.com" target="_blank" class="text-link invert">menusano.com</a>',
+          'Developed as part of EmitKnowledge, available on <a href="http://menusano.com" target="_blank" rel="noopener noreferrer" class="text-link invert">menusano.com</a>',
         ],
         technologies: [
           {
@@ -136,7 +136,7 @@ export default {
         title: 'Trackado',
         paragraphs: [
           'Enterprise contract management solution.',
-          'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/#jupiterx-main" target="_blank" class="text-link invert">trackado.com</a>',
+          'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/#jupiterx-main" target="_blank" rel="noopener noreferrer" class="text-link invert">trackado.com</a>',
         ],
         technologies: [
           {

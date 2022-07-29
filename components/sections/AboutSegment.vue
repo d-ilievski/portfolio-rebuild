@@ -5,8 +5,10 @@
       <div class="left">
         <div class="name-card">
           <div class="image-container">
-            <nuxt-img format="webp" alt="A picture of Daniel's Room" src="/profile-photo-bg.jpg" />
-            <nuxt-img format="webp" alt="A picture of Daniel Ilievski" src="/profile-photo.png" class="person" />
+            <nuxt-img format="webp" alt="A picture of Daniel's Room" width="260" height="385"
+              src="/profile-photo-bg.jpg" />
+            <nuxt-img format="webp" alt="A picture of Daniel Ilievski" width="260" height="385" src="/profile-photo.png"
+              class="person" />
           </div>
           <h2 class="name-card-title">Who's this guy?</h2>
           <p>
@@ -15,10 +17,10 @@
           </p>
           <p>
             I live in
-            <a class="grow" target="_blank"
+            <a class="grow" target="_blank" rel="noopener noreferrer"
               href="https://www.google.com/maps/place/Amsterdam"><strong>Amsterdam</strong></a> and work as an IT
             Engineer at
-            <a class="grow" target="_blank" href="https://www.abnamro.com/">
+            <a class="grow" target="_blank" href="https://www.abnamro.com/" rel="noopener noreferrer">
               <strong>ABN AMRO</strong></a>.
           </p>
           <span @click="navigateToContact" class="text-link cta"><strong>Lets create something great!</strong></span>
@@ -100,6 +102,7 @@ export default {
 
 .image-container img {
   width: 100%;
+
 }
 
 .image-container .person {
