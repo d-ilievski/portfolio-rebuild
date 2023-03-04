@@ -27,7 +27,7 @@
       <div class="icons">
         <div class="icon-container" v-for="(t, index) in item.technologies" :key="index">
           <fa v-if="t.icon.length > 1" class="icon" :icon="t.icon" />
-          <v-icon v-else :size="4" :icon="t.icon[0]"></v-icon>
+          <v-icon v-else :size="4" :icon="t.icon[0]" color="var(--background-color)"></v-icon>
           <div class="icon-desc">{{ t.name }}</div>
         </div>
       </div>

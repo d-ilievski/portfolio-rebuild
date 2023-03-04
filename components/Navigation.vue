@@ -3,10 +3,13 @@
     <ul class="navigation">
       <li @click="navigateTo('about', 1)">ABOUT</li>
       <li @click="navigateTo('work', 2)">WORK</li>
-      <li>
-        <NuxtLink to="/blog" :style="{ color: 'white' }">BLOG</NuxtLink>
-      </li>
+      <!-- <li>
+        <NuxtLink to="/blog">BLOG</NuxtLink>
+      </li> -->
+      <li @click="navigateTo('blog', 3)">BLOG</li>
       <li @click="navigateTo('contact', 4)">CONTACT</li>
+
+      <li @click="toggleDarkMode">{{ colorMode === 'dark' ? '😎 LIGHT MODE' : "🌙 DARK MODE" }}</li>
     </ul>
   </nav>
 </template>
@@ -22,6 +25,29 @@ export default {
         duration,
       })
     },
+    toggleDarkMode: function () {
+      this.colorMode = this.colorMode === 'dark' ? 'light' : 'dark';
+
+      localStorage.setItem('colorMode', this.colorMode);
+      document.documentElement.setAttribute('data-theme', this.colorMode);
+    }
+  },
+  data: function () {
+    return {
+      colorMode: 'light',
+    }
+  },
+  mounted() {
+    const colorMode = localStorage.getItem('colorMode');
+    if (colorMode) {
+      this.colorMode = colorMode;
+    } else {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        this.colorMode = 'dark';
+      } else {
+        this.colorMode = 'light';
+      }
+    }
   },
 }
 </script>
@@ -51,7 +77,8 @@ nav.open {
 
   overflow: hidden;
   background: var(--foreground-color);
-  color: white;
+  color: var(--background-color);
+  ;
   list-style: none;
 
   font-weight: bold;
@@ -63,6 +90,11 @@ nav.open {
 .navigation li {
   transition: transform 0.2s linear;
   transition: 0.2s;
+  color: var(--background-color);
+}
+
+.navigation li a {
+  color: var(--background-color);
 }
 
 .navigation li:hover {

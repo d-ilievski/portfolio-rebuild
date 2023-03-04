@@ -1,13 +1,11 @@
 <template>
   <div class="layout-blog" style="margin: auto; width: 720px">
     <h1>Philosophy: Truth, goodness and beauty in building software</h1>
-    <q
-      >Truth, goodness, and beauty are cosmic values that communicate divine
+    <q>Truth, goodness, and beauty are cosmic values that communicate divine
       meaning to the intellectual, moral, and aesthetic capacities of the human
       soul, which brings a balance in the soul, which, in turn, harmonizes the
       human person with divine meaning and purpose of the cosmos, which was
-      considered the prerequisite to human flourishing. - <b>Steve Turley</b></q
-    >
+      considered the prerequisite to human flourishing. - <b>Steve Turley</b></q>
     <p>
       It is usually uncommon to marry philosophy and engineering. At least it
       was for me. In the school system I took part in, we hardly ever mixed
@@ -35,7 +33,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  layout: 'blog'
+}
 </script>
 
 <style>

@@ -123,7 +123,7 @@ export default {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  color: white;
+  color: var(--background-color);;
   cursor: pointer;
 }
 
@@ -229,14 +229,14 @@ export default {
 }
 
 .draw:hover::before {
-  border-top-color: white;
-  border-right-color: white;
+  border-top-color: var(--background-color);;
+  border-right-color: var(--background-color);;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
 .draw:hover::after {
-  border-bottom-color: white;
-  border-left-color: white;
+  border-bottom-color: var(--background-color);;
+  border-left-color: var(--background-color);;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s,
     height 0.25s ease-out 0.75s;
 }
@@ -250,7 +250,7 @@ export default {
 .autoplay-controls {
   position: relative;
   text-align: center;
-  color: white;
+  color: var(--background-color);;
   transition: opacity linear 0.5s;
   opacity: 0.2;
   cursor: pointer;
@@ -272,7 +272,7 @@ export default {
   left: 0;
   height: 2px;
   width: 100%;
-  background: white;
+  background: var(--background-color);;
   opacity: 0.2;
 }
 
@@ -281,7 +281,7 @@ export default {
   content: '';
   left: 0;
   height: 2px;
-  background: white;
+  background: var(--background-color);;
   opacity: 0.5;
   animation: progressBar 10s linear infinite;
 }

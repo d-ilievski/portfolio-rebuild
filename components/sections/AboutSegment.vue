@@ -5,10 +5,9 @@
       <div class="left">
         <div class="name-card">
           <div class="image-container">
-            <nuxt-img format="webp" alt="A picture of Daniel's Room" width="260" height="385"
+            <nuxt-img class="background" format="webp" alt="A picture of Daniel's Room" width="260" height="385"
               src="/profile-photo-bg.jpg" />
-            <nuxt-img format="webp" alt="A picture of Daniel Ilievski" width="260" height="385" src="/profile-photo.png"
-              class="person" />
+            <nuxt-img class="person" format="webp" alt="A picture of Daniel Ilievski" width="260" height="385" src="/profile-photo.png" />
           </div>
           <h2 class="name-card-title">Who's this guy?</h2>
           <p>
@@ -164,9 +163,16 @@ p {
   }
 
   .wrapper .left {
-    width: 300px;
+    width: auto;
     margin: auto;
   }
+
+  .image-container {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+
 
   .wrapper .right {
     flex: 1;

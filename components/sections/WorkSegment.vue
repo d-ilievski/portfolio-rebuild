@@ -136,7 +136,7 @@ export default {
         title: 'Trackado',
         paragraphs: [
           'Enterprise contract management solution.',
-          'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/#jupiterx-main" target="_blank" rel="noopener noreferrer" class="text-link invert">trackado.com</a>',
+          'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/" target="_blank" rel="noopener noreferrer" class="text-link invert">trackado.com</a>',
         ],
         technologies: [
           {

@@ -63,7 +63,7 @@ export default {
       // if (this.pressed) {
       //   return -(this.x - this.dragStartX)
       // }
-      const basePosition = this.currentItemIndex * this.itemWidth * -1
+      const basePosition = this.currentItemIndex * this.itemWidth * -1 - 16;
       //   if (this.currentItemIndex) return basePosition - 100
       return basePosition
     },

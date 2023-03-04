@@ -66,7 +66,7 @@ export default {
 @keyframes grow {
   0% {
     border-width: 15px;
-    background-color: black;
+    background-color: var(--foreground-color);
     border-style: solid;
     border-color: var(--foreground-color);
     max-width: 0;
@@ -144,6 +144,9 @@ export default {
 @media only screen and (max-width: 768px) {
   .logo {
     transform: scale(0.8);
+  }
+  .logo:hover, .logo:active {
+    transform: scale(0.9);
   }
 
   .title {

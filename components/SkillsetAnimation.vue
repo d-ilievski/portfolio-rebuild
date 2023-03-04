@@ -151,7 +151,8 @@ export default {
 }
 
 .skill {
-  color: lightgrey;
+  color: var(--foreground-color);
+  opacity: 0.4;
 }
 
 .skill:hover {
