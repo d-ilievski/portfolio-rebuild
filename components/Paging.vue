@@ -92,7 +92,7 @@ export default {
   computed: {
     left: function () {
       // initial left - distance between numbers * which page it is - page starts from 1
-      return -14 - 60 * (this.page - 1)
+      return -12 - 60 * (this.page - 1)
     },
   },
   mounted() {
@@ -189,7 +189,7 @@ export default {
   opacity: 0.2;
   width: 30px;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1;
 }
 
 .pages span:hover {

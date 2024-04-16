@@ -11,29 +11,44 @@
       </div> -->
       <div class="contact-info-content">
         <p>
-          If you would like to build something great or just say hi, email me at
-          <a target="_top" href="mailto:daniel.d.ilievski@gmail.com"
-            class="text-link invert">daniel.d.ilievski@gmail.com</a>.
+          If you would like to build something great or just say to hi, use the contact form below.
         </p>
 
         <p>
-          Also, you can find me on
+          You can find me on
           <span class="text-link invert"><a href="https://www.linkedin.com/in/daniel-ilievski/"
               rel="noopener noreferrer" target="_blank">
               <fa :icon="['fab', 'linkedin']" /> LinkedIn,
             </a></span>
-          see some of my projects on
+          see some of my stuff on
           <span class="text-link invert"><a href="https://github.com/d-ilievski" rel="noopener noreferrer"
               target="_blank">
               <fa :icon="['fab', 'github']" /> GitHub
             </a></span>
           or check out my
-          <span class="text-link invert"><a href="https://www.instagram.com/vo1d.mind/" target="_blank"
+          <span class="text-link invert"><a href="https://daniel.btw.so/" target="_blank"
               rel="noopener noreferrer">
-              <fa :icon="['fab', 'instagram']" /> Instagram
+              <fa :icon="['fas', 'blog']" /> Blog
             </a></span>
-          where I post some pictures I take.
+          where I write about things that interest me.
         </p>
+
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Your Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message" rows="6"></textarea></label>
+          </p>
+          <p class="button-row">
+            <button type="submit"><span>Send</span></button>
+          </p>
+        </form>
+
+        
       </div>
     </div>
   </div>
@@ -77,20 +92,17 @@ a::after,
 
 button {
   background: none;
-  padding: 16px;
-  font-size: 1.3em;
-  line-height: 1.7em;
-  border: 4px solid var(--background-color);
+  padding: 8px 16px;
+  font-size: 1.3rem;
+  /* border: 4px solid var(--background-color); */
+  border: none;
   color: var(--background-color);
   text-transform: uppercase;
   cursor: pointer;
   transition: border 0.05s ease-in-out;
   margin: 10px 0;
   position: relative;
-}
-
-button:active {
-  border-width: 1px;
+  font-weight: bold;
 }
 
 button span {
@@ -115,6 +127,38 @@ button:hover span::after {
 
 .contact-info-content {
   padding: 0 64px;
+}
+
+form {
+  margin: auto;
+  width: 600px;
+  margin-top: 92px;
+}
+
+form input,
+form textarea {
+  background: none;
+  color: var(--background-color);
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--background-color);
+  padding: .3rem;
+  font-size: 1.3rem;
+  min-height: 2rem;
+  width: 400px;
+  resize: vertical;
+}
+
+form label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+form .button-row {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media screen and (max-width: 480px) {}

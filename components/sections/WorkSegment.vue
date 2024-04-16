@@ -46,7 +46,7 @@ export default {
         id: 'fly',
         title: 'Hiring Tech Assessment Platform',
         paragraphs: [
-          'A product that helps companies identify creative and technical talent. This Canadian startup allows companies to assess potential hires in a high-security virtual environment.',
+          'A product that helps companies identify creative and technical talent. This Canadian startup allows companies to assess potential hires\' technical skills in a high-security virtual environment.',
           'Freelance project'
         ],
         technologies: [
@@ -65,6 +65,26 @@ export default {
           },
         ],
         skills: 'Frontend development, design iterations, ensuring secure environment on the frontend.',
+      },
+      {
+        id: 'traliant',
+        title: 'Traliant LMS',
+        paragraphs: [
+          'Development of a LMS for engaging and interactive workplace compliance training including a complex admin panel.',
+          'Freelance project'
+        ],
+        technologies: [
+          {
+            icon: ['fab', 'vuejs'],
+            name: 'Vue.js',
+          },
+
+          {
+            icon: ['fab', 'docker'],
+            name: 'Docker',
+          }
+        ],
+        skills: 'Frontend development, implementation of testing practices, open-source contribution.',
       },
       // {
       //   id: 1,
@@ -90,7 +110,7 @@ export default {
         title: 'Lori',
         paragraphs: [
           'A web application in a form of a browser extension that reduces the time it takes to design creative materials for social media marketing campaigns. It allows the users to generate multiple marketing assets with a few simple steps.',
-          'Personal project - <a class="text-link invert" href="http://iamlori.app/" target="_blank" rel="noopener noreferrer">iamlori.app</a>'
+          'Personal project'
         ],
         technologies: [
           {
@@ -105,14 +125,18 @@ export default {
             icon: ['fab', 'chrome'],
             name: 'Chrome Extension API',
           },
+          {
+            icon: ['fab', 'node'],
+            name: 'Node.js',
+          },
         ],
         skills: 'Product research, development of the whole application.'
       },
       {
         id: 'menusano',
-        title: 'Menusano',
+        title: 'MenuSano',
         paragraphs: [
-          'Nutrition analysis software, MenuSano. I also developed the front end for the initial version of the nutritional analysis software, along with the admin panel and the nutritional label designer tool.',
+          'I developed the front end for the nutritional analysis software MenuSano, along with the admin panel and the nutritional label designer tool.',
           'Developed as part of EmitKnowledge, available on <a href="http://menusano.com" target="_blank" rel="noopener noreferrer" class="text-link invert">menusano.com</a>',
         ],
         technologies: [
@@ -129,31 +153,31 @@ export default {
             name: 'Bootstrap',
           },
         ],
-        skills: 'Setting up the architecture, making technical decisions, leading and being fully responsible for the front-end web applicatin.'
+        skills: 'Setting up the architecture, ensuring performance of the designer tool, development of the application, leading and being fully responsible for the front-end.'
       },
-      {
-        id: 'trackado',
-        title: 'Trackado',
-        paragraphs: [
-          'Enterprise contract management solution.',
-          'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/" target="_blank" rel="noopener noreferrer" class="text-link invert">trackado.com</a>',
-        ],
-        technologies: [
-          {
-            icon: [jquery],
-            name: 'jQuery',
-          },
-          {
-            icon: [knockout],
-            name: 'Knockout.js',
-          },
-          {
-            icon: ['fab', 'vuejs'],
-            name: 'Vue.js',
-          },
-        ],
-        skills: 'Developing new features on the frontend, maintenance, improving and renewing the technology stack with gradually implementing Vue'
-      },
+      // {
+      //   id: 'trackado',
+      //   title: 'Trackado',
+      //   paragraphs: [
+      //     'Enterprise contract management solution.',
+      //     'Developed as part of EmitKnowledge, available on <a href="https://www.trackado.com/" target="_blank" rel="noopener noreferrer" class="text-link invert">trackado.com</a>',
+      //   ],
+      //   technologies: [
+      //     {
+      //       icon: [jquery],
+      //       name: 'jQuery',
+      //     },
+      //     {
+      //       icon: [knockout],
+      //       name: 'Knockout.js',
+      //     },
+      //     {
+      //       icon: ['fab', 'vuejs'],
+      //       name: 'Vue.js',
+      //     },
+      //   ],
+      //   skills: 'Developing new features on the frontend, maintenance, improving and renewing the technology stack with gradually implementing Vue'
+      // },
     ],
   }),
 }

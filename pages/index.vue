@@ -77,11 +77,8 @@ export default {
 }
 
 .night-sky {
-  background: rgb(34, 74, 82);
-  background: linear-gradient(0deg,
-      rgba(34, 74, 82, 1) 0%,
-      rgba(34, 37, 38, 1) 25%,
-      rgba(34, 32, 33, 1) 55%);
+  background: rgb(34,32,33);
+background: linear-gradient(180deg, rgba(34,32,33,1) 0%, rgba(38,45,55,1) 64%, rgba(89,91,90,1) 82%, rgba(110,89,62,1) 92%, rgba(111,56,26,1) 100%);
   position: relative;
 }
 

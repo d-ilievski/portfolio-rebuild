@@ -7,7 +7,8 @@
           <div class="image-container">
             <nuxt-img class="background" format="webp" alt="A picture of Daniel's Room" width="260" height="385"
               src="/profile-photo-bg.jpg" />
-            <nuxt-img class="person" format="webp" alt="A picture of Daniel Ilievski" width="260" height="385" src="/profile-photo.png" />
+            <nuxt-img class="person" format="webp" alt="A picture of Daniel Ilievski" width="260" height="385"
+              src="/profile-photo.png" />
           </div>
           <h2 class="name-card-title">Who's this guy?</h2>
           <p>
@@ -27,31 +28,31 @@
       </div>
       <div class="right">
         <p class="experience">
-          Throught my years of experience in the industry, I've worked as a software engineer developing successful
-          products in the Internet
-          banking, gaming, and IT consultancy industries.
+          Leveraging a blend of technical expertise and
+          entrepreneurial spirit, I have delivered seamless web experiences for customers across
+          diverse industries.
         </p>
         <h2 id="skills-technologies-title">Skills &amp; Technologies</h2>
         <ul class="skills-list">
           <li>
             <span>Skills: </span>
-            Web Development, Product Research, Product Management, Prototyping
+            Web Development, Product Research, Product Management, Prototyping, a11y
           </li>
           <li>
             <span>Languages: </span>
-            JavaScript, TypeScript
+            JavaScript, TypeScript, Java
           </li>
           <li>
-            <span>Frameworks: </span>
-            React, Vue, Node.js, Express
+            <span>Technologies: </span>
+            React, Vue, jQuery, Node.js, Express, Jest, TestCafe, GraphQL, MySQL, MongoDB
+          </li>
+          <li>
+            <span>Infrastructure: </span>
+            Microsoft Azure, Docker, Firebase
           </li>
           <li>
             <span>Tools: </span>
             Figma, Adobe Creative Suite
-          </li>
-          <li>
-            <span>Cloud: </span>
-            Azure, Firebase
           </li>
         </ul>
 
@@ -132,7 +133,7 @@ p {
 
 .skills-list {
   list-style: none;
-  margin-bottom: 32px;
+  margin-bottom: 56px;
 }
 
 .skills-list li {
