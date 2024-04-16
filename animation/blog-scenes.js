@@ -1,24 +1,24 @@
-import gsap from 'gsap'
+// import gsap from 'gsap'
 
 export default {
   init: () => {
     // skillset animation
-    gsap.fromTo(
-      '#coming-soon',
-      {
-        scale: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: '#blog-segment',
-          toggleActions: 'play none none none',
-          start: 'top center',
-          end: 'bottom bottom',
-          scrub: 1,
-        },
-        scale: 2,
-        duration: 1,
-      }
-    )
+    // gsap.fromTo(
+    //   '#coming-soon',
+    //   {
+    //     scale: 0,
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: '#blog-segment',
+    //       toggleActions: 'play none none none',
+    //       start: 'top center',
+    //       end: 'bottom bottom',
+    //       scrub: 1,
+    //     },
+    //     scale: 2,
+    //     duration: 1,
+    //   }
+    // )
   },
 }
