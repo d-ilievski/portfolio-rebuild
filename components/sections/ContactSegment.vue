@@ -26,29 +26,30 @@
               <fa :icon="['fab', 'github']" /> GitHub
             </a></span>
           or check out my
-          <span class="text-link invert"><a href="https://daniel.btw.so/" target="_blank"
-              rel="noopener noreferrer">
+          <span class="text-link invert"><a href="https://daniel.btw.so/" target="_blank" rel="noopener noreferrer">
               <fa :icon="['fas', 'blog']" /> Blog
             </a></span>
           where I write about things that interest me.
         </p>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" netlify>
+          <input type="hidden" name="form-name" value="contact">
           <p>
-            <label>Your Name: <input type="text" name="name" /></label>
+            <label>Your Name: <input type="text" name="name"></label>
           </p>
           <p>
-            <label>Your Email: <input type="email" name="email" /></label>
+            <label>Your Email: <input type="email" name="email"></label>
           </p>
           <p>
             <label>Message: <textarea name="message" rows="6"></textarea></label>
           </p>
+
           <p class="button-row">
             <button type="submit"><span>Send</span></button>
           </p>
         </form>
 
-        
+
       </div>
     </div>
   </div>

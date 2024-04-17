@@ -1,6 +1,6 @@
 import LogoScenes from '~/animation/logo-scenes'
 import AboutScenes from '~/animation/about-scenes'
-import BlogScenes from '~/animation/blog-scenes'
+// import BlogScenes from '~/animation/blog-scenes'
 import ContactScenes from '~/animation/contact-scenes'
 import FooterScenes from '~/animation/footer-scenes'
 import gsap from 'gsap'
@@ -40,7 +40,7 @@ export const initAnimation = () => {
 
   LogoScenes.init()
   AboutScenes.init()
-  BlogScenes.init()
+  // BlogScenes.init()
   ContactScenes.init()
   FooterScenes.init()
 }
