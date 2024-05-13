@@ -1,7 +1,7 @@
 <template>
   <div class="logo" @click="scrollToAbout">
     <div class="title">Daniel Ilievski</div>
-    <div class="subtitle">Building awesome apps.</div>
+    <div class="subtitle">Building awesome web apps.</div>
   </div>
 </template>
 

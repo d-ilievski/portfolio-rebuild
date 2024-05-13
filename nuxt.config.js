@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Daniel | Building awesome apps',
+    title: 'Daniel | Building awesome web apps',
     htmlAttrs: {
       lang: 'en',
     },
@@ -15,11 +15,11 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
+          "I love creating user-centric web tech products, focusing on intuitive UX, performance, and clean code practices. As a front-end focused full stack engineer, I enjoy creating real-time, complex, and accessible web applications using modern JavaScript technologies.",
       },
       { name: 'msapplication-TileColor', content: '#ffffff' },
       { name: 'theme-color', content: '#ffffff' },
-      { property: 'og:site_name', content: 'Daniel | Building awesome apps' },
+      { property: 'og:site_name', content: 'Daniel | Building awesome web apps' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
@@ -29,13 +29,13 @@ export default {
       {
         hid: 'og:title',
         property: 'og:title',
-        content: 'Daniel | Building awesome apps',
+        content: 'Daniel | Building awesome web apps',
       },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
+          "I love creating user-centric web tech products, focusing on intuitive UX, performance, and clean code practices. As a front-end focused full stack engineer, I enjoy creating real-time, complex, and accessible web applications using modern JavaScript technologies.",
       },
       {
         hid: 'og:image',
@@ -55,13 +55,13 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'Daniel | Building awesome apps',
+        content: 'Daniel | Building awesome web apps',
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
         content:
-          "I love creating user-centric tech products that solve customer's pain points with focus on intuitive UX and clean code practices.",
+          "I love creating user-centric web tech products, focusing on intuitive UX, performance, and clean code practices. As a front-end focused full stack engineer, I enjoy creating real-time, complex, and accessible web applications using modern JavaScript technologies.",
       },
       {
         hid: 'twitter:image',

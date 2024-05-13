@@ -2,9 +2,8 @@
   <div class="wrapper">
     <div class="left">
       <div class="image" v-if="item.image">
-        <div class="image-backdrop"></div>
         <div class="image-container">
-          <!-- <nuxt-img :src="require(`@/assets/${item.image}`)" /> -->
+          <img loading="lazy" :src="require(`../static/${item.image}`)" />
         </div>
       </div>
     </div>
@@ -80,7 +79,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 32px;
+  margin-left: 32px;
 }
 
 .wrapper .right {
@@ -90,8 +89,8 @@ export default {
 }
 
 .image-container {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,15 +101,6 @@ export default {
 
 .image {
   position: relative;
-}
-
-.image-backdrop {
-  width: 250px;
-  height: 250px;
-  background: var(--background-color);
-  position: absolute;
-  top: 30px;
-  left: 30px;
 }
 
 .image-container img {
@@ -170,6 +160,10 @@ export default {
 @media screen and (max-width: 480px) {
   .wrapper .right {
     margin-left: 0;
+  }
+
+  .image {
+    display: none;
   }
 }
 </style>

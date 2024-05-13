@@ -11,7 +11,7 @@
       </div> -->
       <div class="contact-info-content">
         <p>
-          If you would like to build something great or just say to hi, use the contact form below.
+          If you would like to build something great, hire me, or just to say hi, use the contact form below. I'll get back to you in no time!
         </p>
 
         <p>

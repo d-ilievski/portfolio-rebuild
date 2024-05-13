@@ -10,50 +10,60 @@
             <nuxt-img class="person" format="webp" alt="A picture of Daniel Ilievski" width="260" height="385"
               src="/profile-photo.png" />
           </div>
-          <h2 class="name-card-title">Who's this guy?</h2>
+          <h2 class="name-card-title">In a nutshell...</h2>
           <p>
-            My name is Daniel Ilievski. I love creating user-centric tech products that solve
-            customer pain points with focus on intuitive UX and clean code practices.
+            👋 My name is Daniel Ilievski.
           </p>
           <p>
-            I live in
-            <a class="grow" target="_blank" rel="noopener noreferrer"
-              href="https://www.google.com/maps/place/Amsterdam"><strong>Amsterdam</strong></a> and work as an IT
-            Engineer at
+            📌 <a class="grow" target="_blank" rel="noopener noreferrer"
+              href="https://www.google.com/maps/place/Amsterdam"><strong>Amsterdam, Netherlands</strong></a>
+          </p>
+          <p>
+            💻 I'm a Front-end IT Engineer at
             <a class="grow" target="_blank" href="https://www.abnamro.com/" rel="noopener noreferrer">
               <strong>ABN AMRO</strong></a>.
           </p>
-          <span @click="navigateToContact" class="text-link cta"><strong>Lets create something great!</strong></span>
+          <p>
+            🔗 I created <a class="grow" target="_blank" rel="noopener noreferrer"
+              href="https://www.clinktags.com/"><strong>Clink</strong></a> in my free time.
+          </p>
+          <span @click="navigateToContact" class="text-link cta"><strong>👇 Let's get in touch!</strong></span>
         </div>
       </div>
       <div class="right">
         <p class="experience">
-          Leveraging a blend of technical expertise and
-          entrepreneurial spirit, I have delivered seamless web experiences for customers across
-          diverse industries.
+          I love creating user-centric web tech products, focusing on intuitive UX, performance, and clean code
+          practices. As a front-end focused full stack engineer, I enjoy creating real-time, complex, and accessible web
+          applications using modern JavaScript technologies.
         </p>
         <h2 id="skills-technologies-title">Skills &amp; Technologies</h2>
         <ul class="skills-list">
+
           <li>
-            <span>Skills: </span>
-            Web Development, Product Research, Product Management, Prototyping, a11y
+            <span>Front-end: </span>
+            TypeScript, Vue.js (Nuxt), React (Next.js), LitElement, jQuery, Knockout, TestCafe
           </li>
+
           <li>
-            <span>Languages: </span>
-            JavaScript, TypeScript, Java
+            <span>Back-end: </span>
+            TypeScript, Node.js, Express, Nest.js, GraphQL, MySQL, MongoDB
           </li>
-          <li>
-            <span>Technologies: </span>
-            React, Vue, jQuery, Node.js, Express, Jest, TestCafe, GraphQL, MySQL, MongoDB
-          </li>
+
           <li>
             <span>Infrastructure: </span>
-            Microsoft Azure, Docker, Firebase
+            Microsoft Azure, AWS, Docker, Jenkins, Firebase
           </li>
+
           <li>
             <span>Tools: </span>
-            Figma, Adobe Creative Suite
+            Git, Figma, Adobe Creative Suite
           </li>
+
+          <li>
+            <span>Skills: </span>
+            Web Development, Product Management, Prototyping, Design, Leadership, Pragmatic approach
+          </li>
+
         </ul>
 
         <skillset-animation />

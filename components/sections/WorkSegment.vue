@@ -6,16 +6,36 @@
 </template>
 
 <script>
-import { jquery, knockout, graphql } from '@/utils/icons'
+import { graphql } from '@/utils/icons'
 
 export default {
   data: () => ({
     workItems: [
       {
+        id: 'ideal2.0',
+        title: 'iDeal 2.0',
+        paragraphs: [
+          'Planning and leading the development efforts of the web front-end for iDeal 2.0, a Dutch high-impact payment system with a SLA of 99.88%, processing ~30 transactions per second.',
+          'Delivered as part of ABN AMRO. <a class="text-link invert" href="https://www.abnamro.nl/en/personal/payments/making-payments/ideal.html" target="_blank" rel="noopener noreferrer">Read More</a>.',
+        ],
+        technologies: [
+          {
+            icon: ['fab', 'vuejs'],
+            name: 'Vue.js',
+          },
+          {
+            icon: ['fab', 'microsoft'],
+            name: 'Microsoft Azure',
+          },
+        ],
+        skills: 'Team leadership, development, testing automation, setting up infrastructure and processes, roadmap, backlog and stakeholder management',
+        image: 'ideal.svg'
+      },
+      {
         id: 'primewood',
         title: 'Primewood.la',
         paragraphs: [
-          'A print on demand web designer application for creating custom skateboards.',
+          'A print on demand web designer application for creating custom skateboards. I developed the feature end-to-end from design and planning to implementation.',
           'Freelance project available on <a class="text-link invert" href="http://primewood.la/" target="_blank" rel="noopener noreferrer">primewood.la</a>.',
         ],
         technologies: [
@@ -40,14 +60,15 @@ export default {
             name: 'Shopify',
           },
         ],
-        skills: 'Prototyping, UX design, research, frontend development, backend development, documentation.'
+        skills: 'Prototyping, UX design, research, frontend development, backend development, documentation.',
+        image: 'primewood.png'
       },
       {
         id: 'fly',
-        title: 'Hiring Tech Assessment Platform',
+        title: 'Examplery',
         paragraphs: [
-          'A product that helps companies identify creative and technical talent. This Canadian startup allows companies to assess potential hires\' technical skills in a high-security virtual environment.',
-          'Freelance project'
+          'A product that helps companies identify creative and technical talent. This Canadian startup allows companies to assess potential hires\' technical skills in a high-security virtual environment. I developed the highly-secure web virtual environment.',
+          'Freelance project - <a class="text-link invert" target="_blank" rel="noopener noreferrer" href="https://www.examplery.com/demo.html">Demo</a>'
         ],
         technologies: [
           {
@@ -65,6 +86,7 @@ export default {
           },
         ],
         skills: 'Frontend development, design iterations, ensuring secure environment on the frontend.',
+        image: 'examplery.png'
       },
       {
         id: 'traliant',
@@ -85,6 +107,7 @@ export default {
           }
         ],
         skills: 'Frontend development, implementation of testing practices, open-source contribution.',
+        image: 'traliant.png'
       },
       // {
       //   id: 1,
@@ -109,7 +132,7 @@ export default {
         id: 'lori',
         title: 'Lori',
         paragraphs: [
-          'A web application in a form of a browser extension that reduces the time it takes to design creative materials for social media marketing campaigns. It allows the users to generate multiple marketing assets with a few simple steps.',
+          'A web application in the form of a browser extension that reduces the time it takes to design creative materials for social media marketing campaigns. It allows the users to generate multiple marketing assets with a few simple steps.',
           'Personal project'
         ],
         technologies: [
@@ -130,13 +153,14 @@ export default {
             name: 'Node.js',
           },
         ],
-        skills: 'Product research, development of the whole application.'
+        skills: 'Product research, development of the whole application.',
+        image: 'lori.png'
       },
       {
         id: 'menusano',
         title: 'MenuSano',
         paragraphs: [
-          'I developed the front end for the nutritional analysis software MenuSano, along with the admin panel and the nutritional label designer tool.',
+          'I developed the front-end for the nutritional analysis software MenuSano, along with the admin panel and the nutritional label designer tool.',
           'Developed as part of EmitKnowledge, available on <a href="http://menusano.com" target="_blank" rel="noopener noreferrer" class="text-link invert">menusano.com</a>',
         ],
         technologies: [
@@ -153,7 +177,8 @@ export default {
             name: 'Bootstrap',
           },
         ],
-        skills: 'Setting up the architecture, ensuring performance of the designer tool, development of the application, leading and being fully responsible for the front-end.'
+        skills: 'Setting up the architecture, ensuring performance of the designer tool, development of the application, leading and being fully responsible for the front-end.',
+        image: 'menusano.png'
       },
       // {
       //   id: 'trackado',
@@ -183,5 +208,4 @@ export default {
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
