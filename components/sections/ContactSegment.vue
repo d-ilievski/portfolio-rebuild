@@ -1,57 +1,45 @@
 <template>
   <div class="segment-container">
     <segment-title invert text="Contact" id="contact-segment-title" class="close" />
-    <div class="wrapper">
-      <!-- <div class="left">
-      </div>
-      <div class="right">
-        <button>
-          <span>Grab my cv <fa :icon="['fas', 'download']" /></span>
-        </button>
-      </div> -->
-      <div class="contact-info-content">
-        <p>
-          If you would like to build something great, hire me, or just to say hi, use the contact form below. I'll get back to you in no time!
-        </p>
 
-        <p>
-          You can find me on
-          <span class="text-link invert"><a href="https://www.linkedin.com/in/daniel-ilievski/"
-              rel="noopener noreferrer" target="_blank">
-              <fa :icon="['fab', 'linkedin']" /> LinkedIn,
-            </a></span>
-          see some of my stuff on
-          <span class="text-link invert"><a href="https://github.com/d-ilievski" rel="noopener noreferrer"
-              target="_blank">
-              <fa :icon="['fab', 'github']" /> GitHub
-            </a></span>
-          or check out my
-          <span class="text-link invert"><a href="https://daniel.btw.so/" target="_blank" rel="noopener noreferrer">
-              <fa :icon="['fas', 'blog']" /> Blog
-            </a></span>
-          where I write about things that interest me.
-        </p>
+    <p>
+      If you would like to build something great, hire me, or just to say hi, use the contact form below. I'll get
+      back to you in no time!
+    </p>
 
-        <form name="contact" method="POST" netlify>
-          <input type="hidden" name="form-name" value="contact">
-          <p>
-            <label>Your Name: <input type="text" name="name"></label>
-          </p>
-          <p>
-            <label>Your Email: <input type="email" name="email"></label>
-          </p>
-          <p>
-            <label>Message: <textarea name="message" rows="6"></textarea></label>
-          </p>
+    <p>
+      You can find me on
+      <span class="text-link invert"><a href="https://www.linkedin.com/in/daniel-ilievski/" rel="noopener noreferrer"
+          target="_blank">
+          <fa :icon="['fab', 'linkedin']" /> LinkedIn,
+        </a></span>
+      see some of my stuff on
+      <span class="text-link invert"><a href="https://github.com/d-ilievski" rel="noopener noreferrer" target="_blank">
+          <fa :icon="['fab', 'github']" /> GitHub
+        </a></span>
+      or check out my
+      <span class="text-link invert"><a href="https://daniel.btw.so/" target="_blank" rel="noopener noreferrer">
+          <fa :icon="['fas', 'blog']" /> Blog
+        </a></span>
+      where I write about things that interest me.
+    </p>
 
-          <p class="button-row">
-            <button type="submit"><span>Send</span></button>
-          </p>
-        </form>
+    <form name="contact" method="POST" netlify>
+      <input type="hidden" name="form-name" value="contact">
+      <p>
+        <label>Your Name: <input type="text" name="name"></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email"></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message" rows="6"></textarea></label>
+      </p>
 
-
-      </div>
-    </div>
+      <p class="button-row">
+        <button type="submit"><span>Send</span></button>
+      </p>
+    </form>
   </div>
 </template>
 
@@ -60,24 +48,8 @@ export default {}
 </script>
 
 <style scoped>
-.wrapper {
-  display: flex;
-  align-items: flex-start;
-  color: var(--background-color);
-}
-
-.wrapper .left {
-  flex: 1;
-}
-
-.wrapper .right {
-  flex: 1;
-  margin-left: 64px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  display: flex;
+* {
+  color: var(--background-color)
 }
 
 p {
@@ -162,5 +134,24 @@ form .button-row {
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 768px) {
+  form {
+    width: 100%;
+    margin-top: 64px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+  }
+
+  form label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  form .button-row {
+    justify-content: flex-start;
+  }
+}
 </style>

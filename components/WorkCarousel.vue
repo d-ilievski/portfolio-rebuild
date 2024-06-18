@@ -5,14 +5,14 @@
 
     <div class="work-items-container" ref="carouselContainer">
       <div class="work-items-wrapper" ref="workItemsWrapper" :style="{
-        width: `${items.length * itemWidth}px`,
-        transform: `translateX(${currentPositionPx}px)`,
-      }">
+      width: `${items.length * itemWidth}px`,
+      transform: `translateX(${currentPositionPx}px)`,
+    }">
         <template v-for="item in items">
           <work-item :style="{
-            width: `${itemWidth}px`,
-            maxWidth: '40%',
-          }" :key="item.id" :item="item"></work-item>
+      width: `${itemWidth}px`,
+      maxWidth: '40%',
+    }" :key="item.id" :item="item"></work-item>
         </template>
       </div>
     </div>
@@ -127,6 +127,11 @@ export default {
   .work-items-container {
     height: fit-content;
     overflow: hidden;
+  }
+
+  .segment-container {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
 </style>
