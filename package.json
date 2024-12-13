@@ -10,7 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@nuxtjs/fontawesome": "^1.1.2",
     "@nuxtjs/robots": "^2.5.0",
