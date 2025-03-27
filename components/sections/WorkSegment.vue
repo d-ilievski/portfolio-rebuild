@@ -6,11 +6,31 @@
 </template>
 
 <script>
-import { graphql } from '@/utils/icons'
+import { graphql, supabase } from '@/utils/icons'
 
 export default {
   data: () => ({
     workItems: [
+      {
+        id: 'anonimno',
+        title: 'anonimno.mk',
+        paragraphs: [
+          'Inspired by the bad working conditions that workers face in Macedonia, I created a platform for the Macedonian job market where people can anonymously leave reviews about companies, praise or post warnings about potential red flags.',
+          'Personal project. <a class="text-link invert" href="https://anonimno.mk/" target="_blank" rel="noopener noreferrer">Visit anonimno.mk</a>.',
+        ],
+        technologies: [
+          {
+            icon: ['fab', 'react'],
+            name: 'React',
+          },
+          {
+            icon: [supabase],
+            name: 'Supabase',
+          },
+        ],
+        skills: 'Team leadership, development, testing automation, setting up infrastructure and processes, roadmap, backlog and stakeholder management',
+        image: 'anonimno.png'
+      },
       {
         id: 'ideal2.0',
         title: 'iDeal 2.0',

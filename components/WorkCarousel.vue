@@ -1,18 +1,18 @@
 <template>
   <div class="work-carousel">
-    <paging class="paging" v-if="items.length" :numTotalPages="items.length" :arrows="true"
-      @change="({ page }) => setIndex(page - 1)" invert></paging>
+    <paging v-if="items.length" :numTotalPages="items.length" :arrows="true" @change="({ page }) => setIndex(page - 1)"
+      invert></paging>
 
     <div class="work-items-container" ref="carouselContainer">
       <div class="work-items-wrapper" ref="workItemsWrapper" :style="{
-      width: `${items.length * itemWidth}px`,
-      transform: `translateX(${currentPositionPx}px)`,
-    }">
+        width: `${items.length * itemWidth}px`,
+        transform: `translateX(${currentPositionPx}px)`,
+      }">
         <template v-for="item in items">
           <work-item :style="{
-      width: `${itemWidth}px`,
-      maxWidth: '40%',
-    }" :key="item.id" :item="item"></work-item>
+            width: `${itemWidth}px`,
+            maxWidth: '40%',
+          }" :key="item.id" :item="item"></work-item>
         </template>
       </div>
     </div>
@@ -63,7 +63,7 @@ export default {
       // if (this.pressed) {
       //   return -(this.x - this.dragStartX)
       // }
-      const basePosition = this.currentItemIndex * this.itemWidth * -1 - 16;
+      const basePosition = this.currentItemIndex * this.itemWidth * -1;
       //   if (this.currentItemIndex) return basePosition - 100
       return basePosition
     },
@@ -91,6 +91,7 @@ export default {
   width: 100%;
   height: 390px;
   overflow-x: hidden;
+  position: relative;
 }
 
 .work-items-wrapper {
@@ -132,6 +133,11 @@ export default {
   .segment-container {
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  .paging {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 </style>

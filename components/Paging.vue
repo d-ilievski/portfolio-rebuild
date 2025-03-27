@@ -261,11 +261,13 @@ export default {
   width: 100px;
   margin: auto;
   margin-top: 16px;
+  margin-bottom: 16px;
+  z-index: 1;
 }
 
-.progress-bar.paused {
+/* .progress-bar.paused {
   display: none;
-}
+} */
 
 .progress-bar .background {
   position: absolute;
@@ -286,6 +288,10 @@ export default {
   animation: progressBar 10s linear infinite;
 }
 
+.progress-bar.paused .bar {
+  animation-play-state: paused;
+}
+
 .autoplay-controls:hover {
   opacity: 0.5;
 }
@@ -296,7 +302,7 @@ export default {
   }
 
   .autoplay-controls {
-    margin-top: 24px;
+    margin-top: 8px;
   }
 
   .navigate-left,

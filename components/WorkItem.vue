@@ -68,11 +68,10 @@ export default {
 }
 
 .wrapper {
-  /* if i disable flex here i can still use the carousel */
-  display: flex;
-  align-items: flex-start;
   width: 100%;
   height: fit-content;
+  display: flex;
+  align-items: flex-start;
 }
 
 .wrapper .left {
@@ -111,7 +110,7 @@ export default {
 .title {
   margin-bottom: 24px;
   display: block;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .paragraph {
@@ -158,12 +157,27 @@ export default {
 }
 
 @media screen and (max-width: 480px) {
+
+  .wrapper {
+    display: block;
+  }
+
   .wrapper .right {
     margin-left: 0;
   }
 
-  .image {
-    display: none;
+  .wrapper .left {
+    margin-left: 0;
+  }
+
+  .image-container {
+    width: auto;
+    height: auto;
+  }
+
+  .title {
+    margin-bottom: 16px;
+    font-size: 1.6em;
   }
 }
 </style>

@@ -73,4 +73,10 @@ export default {
     transform: translateY(0px);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .title-container {
+    margin-bottom: 24px;
+  }
+}
 </style>

@@ -19,13 +19,14 @@
               href="https://www.google.com/maps/place/Amsterdam"><strong>Amsterdam, Netherlands</strong></a>
           </p>
           <p>
-            💻 I'm a Front-end IT Engineer at
+            💻 I'm a Lead Software Engineer at
             <a class="grow" target="_blank" href="https://www.abnamro.com/" rel="noopener noreferrer">
               <strong>ABN AMRO</strong></a>.
           </p>
           <p>
             🔗 I created <a class="grow" target="_blank" rel="noopener noreferrer"
-              href="https://www.clinktags.com/"><strong>Clink</strong></a> in my free time.
+              href="https://www.clinktags.com/"><strong>Clink</strong></a> and <a class="grow" target="_blank" rel="noopener noreferrer"
+              href="https://anonimno.mk/"><strong>anonimno.mk</strong></a> in my free time.
           </p>
           <span @click="navigateToContact" class="text-link cta"><strong>👇 Let's get in touch!</strong></span>
         </div>
