@@ -28,7 +28,7 @@ export default {
             name: 'Supabase',
           },
         ],
-        skills: 'Team leadership, development, testing automation, setting up infrastructure and processes, roadmap, backlog and stakeholder management',
+        skills: 'Product research, development of the whole application, community management.',
         image: 'anonimno.png'
       },
       {
